@@ -1,0 +1,34 @@
+{{#> layout}}        
+    
+<main id="main" class="template-page">
+    <section class="template-header">
+        <div class="container"> 
+            <div class="template-header-title">
+                <h1>{{ title }}</h1>                
+            </div>
+            {{#if header_image}}
+            <div class="template-header-image">
+                <img src="{{header_image}}"  />
+            </div>
+            {{/if}}
+        </div>        
+    </section>
+
+    {{#if introduction}}
+    <section class="template-introduction">
+        <div class="container"> 
+            {{{introduction}}}
+        </div>
+    </section>
+    {{/if}}
+
+    <section class="template-content">    
+        <div class="container"> 
+            <div class="template-content-inner">
+            {{{slot}}}    
+            </div>        
+        </div>    
+    </section>
+</main>
+
+{{/layout}}

@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "auto-install": "^1.7.4",
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.2",
+    "moment-timezone": "^0.5.33",
+    "toolify": "^1.14.0",
+    "uuid": "^8.3.2"
+  },
+  "name": "branchdevs.com",
+  "description": "README.md",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidvdtak/branchdevs.com"
+  },
+  "author": "David van der Tak",
+  "license": "ISC"
+}
