@@ -366,6 +366,7 @@ img {max-width: 100%; height: auto;}
 
 #logo-ticker {background-color: #35312E; padding: 1.5rem 0;}
 #logo-ticker .carousel .carousel-item {width: 200px; padding: 0 5rem; text-align: center;}
+#logo-ticker .carousel .carousel-item svg,
 #logo-ticker .carousel .carousel-item img {max-height: 30px; max-width: 100%;}
 
 /* Mobile Nav */
