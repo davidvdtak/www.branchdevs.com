@@ -14,7 +14,7 @@ if(carouselMultis){
 
 		var parentwidth = cm.offsetWidth;
 		var itemwidth = items[0].offsetWidth;
-		var itemInt = parseInt(cm.getAttribute('data-bs-interval')) > 1000 ? parseInt(cm.getAttribute('data-bs-interval')) : 1000;
+		var itemInt = parseInt(cm.getAttribute('data-bs-speed')) > 1000 ? parseInt(cm.getAttribute('data-bs-speed')) : 1000;
 		var active = Array.from(items).findIndex(function(e){ return e.classList.contains('active') }); 
 		items.forEach(function(i){ i.style.animationDuration = itemInt+"ms"; });
 		if((parentwidth + (itemwidth * 2)) > (itemwidth * items.length)){
