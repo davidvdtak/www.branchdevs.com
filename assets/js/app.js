@@ -28,7 +28,7 @@ if(carouselMultis){
 		}
 
         var carousel = new bootstrap.Carousel(cm)        
-        carousel.nextWhenVisible();
+        carousel.next();
 
 		var slideTimeout,touchDirection,xClick;
 		cm.addEventListener('touchstart', function (e) { xClick = e.touches[0].clientX; });
@@ -54,7 +54,9 @@ if(carouselMultis){
                     ni.forEach(function(e){
                         e.classList.remove('carousel-move-left','carousel-item-next','carousel-item-start','carousel-item-prev','carousel-item-end');
                     }); 
-					ni[active].classList.add('active');                        					              
+                    if(active){
+					    ni[active].classList.add('active');                        					              
+                    }
                 }, (itemInt - 25));                
             } else { 				
                 items.forEach(function(e){ e.classList.add('carousel-move-right'); e.classList.remove('active','carousel-move-left'); });
@@ -66,7 +68,9 @@ if(carouselMultis){
                     ni.forEach(function(e){		
                         e.classList.remove('carousel-move-right','carousel-item-next','carousel-item-start','carousel-item-prev','carousel-item-end')
                     });	
-					ni[active].classList.add('active');                        					              									
+                    if(active){
+					    ni[active].classList.add('active');                        					              									
+                    }
                 }, (itemInt - 25));                                
             }                
         }); 
