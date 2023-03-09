@@ -14,7 +14,7 @@ if(carouselMultis){
 
 		var parentwidth = cm.offsetWidth;
 		var itemwidth = items[0].offsetWidth;
-		var itemInt = parseInt(cm.getAttribute('data-bs-speed')) > 1000 ? parseInt(cm.getAttribute('data-bs-speed')) : 1000;
+		var itemInt = parseInt(cm.getAttribute('data-bs-interval')) > 1000 ? parseInt(cm.getAttribute('data-bs-interval')) : 1000;
 		var active = Array.from(items).findIndex(function(e){ return e.classList.contains('active') }); 
 		items.forEach(function(i){ i.style.animationDuration = itemInt+"ms"; });
 		if((parentwidth + (itemwidth * 2)) > (itemwidth * items.length)){
@@ -25,10 +25,7 @@ if(carouselMultis){
 					inner.appendChild(i.cloneNode(true))
 				});
 			}
-		}
-
-        var carousel = new bootstrap.Carousel(cm)        
-        carousel.next();
+		}                
 
 		var slideTimeout,touchDirection,xClick;
 		cm.addEventListener('touchstart', function (e) { xClick = e.touches[0].clientX; });
@@ -54,7 +51,7 @@ if(carouselMultis){
                     ni.forEach(function(e){
                         e.classList.remove('carousel-move-left','carousel-item-next','carousel-item-start','carousel-item-prev','carousel-item-end');
                     }); 
-                    if(active){
+                    if(active >= 0){
 					    ni[active].classList.add('active');                        					              
                     }
                 }, (itemInt - 25));                
@@ -68,7 +65,7 @@ if(carouselMultis){
                     ni.forEach(function(e){		
                         e.classList.remove('carousel-move-right','carousel-item-next','carousel-item-start','carousel-item-prev','carousel-item-end')
                     });	
-                    if(active){
+                    if(active >= 0){
 					    ni[active].classList.add('active');                        					              									
                     }
                 }, (itemInt - 25));                                
