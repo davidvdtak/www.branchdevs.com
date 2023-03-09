@@ -346,8 +346,8 @@ img {max-width: 100%; height: auto;}
 #footer .footer-top .footer-emblem {width: 535px; position: absolute; top: -16%; left: -14%; z-index: -1;}
 #footer .footer-top p {margin-bottom: .35rem;}
 #footer .footer-top p:last-child {margin-top: 1.75rem; margin-bottom: 0;}
-#footer .footer-menu {position: relative; z-index: 2; padding: 1rem;}
-#footer .footer-bottom {position: relative; z-index: 2; padding: 2.2rem 0; font-size: .75rem; color: #6A6C6E;}
+#footer .footer-menu {position: relative; z-index: 2; padding: 2.2rem 0 1rem 0;}
+#footer .footer-bottom {position: relative; z-index: 2; padding: 1rem 0 2.2rem 0; font-size: .75rem; color: #6A6C6E;}
 #footer .footer-bottom span {padding: .3rem 1rem;}
 #footer .footer-bottom a {color: #6A6C6E;}
 
