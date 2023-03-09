@@ -8,9 +8,8 @@ alertsRemove.forEach(function(i){
 
 var carouselMultis = document.querySelectorAll('.carousel-multi');
 if(carouselMultis){
-    carouselMultis.forEach(function(cm){        
-		var parent = cm;
-       	var inner = parent.querySelector('.carousel-inner');                    
+    carouselMultis.forEach(function(cm){          
+       	var inner = cm.querySelector('.carousel-inner');                    
         var items = inner.querySelectorAll('.carousel-item');
 
 		var parentwidth = cm.offsetWidth;
@@ -27,6 +26,9 @@ if(carouselMultis){
 				});
 			}
 		}
+
+        var carousel = new bootstrap.Carousel(cm)        
+        carousel.nextWhenVisible();
 
 		var slideTimeout,touchDirection,xClick;
 		cm.addEventListener('touchstart', function (e) { xClick = e.touches[0].clientX; });
