@@ -12,7 +12,7 @@ const theme = {
   colors: {
     primary: "#2D3648",
     secondary: "#717D96",
-    base_100: "#F7F9FC",
+    base_100: "#35312E",
     base_200: "#EDF0F7",
     base_300:"#E2E7F0",
     base_400: "#CBD2E0",

@@ -5,15 +5,6 @@ export const PageWrapper = styled.div`
   width: 100%;
   min-height: 100%;
   flex-grow: 1;
-  @media (max-width: 991px)  {      
-    grid-template-columns: 0 100%;
-  }
-`;
-
-export const PageContent = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 2;  
 `;

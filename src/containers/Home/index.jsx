@@ -1,24 +1,21 @@
 import React, { useContext, useEffect } from "react";
-import Header from "../../components/Header";
 import Page from "../../components/Page";
 import { useConfig } from "../../context/Config";
- 
 
 const Home = () =>{
 
   const config = useConfig(); 
   
-  console.log(config);
-
   useEffect(() => {
     document.title = config.app.TITLE + " | Dashboard"        
   },[])
 
-  return (
-    <>
-      <Page>                        
-      </Page>
-    </>
+  return (    
+    <Page>  
+      <div className="d-flex flex-grow-1 justify-content-center align-items-center">
+        <img src={`${config.app.PUBLIC_URL}/images/branchdevs-logo.png`} />
+      </div>                      
+    </Page>    
   );            
 };
 

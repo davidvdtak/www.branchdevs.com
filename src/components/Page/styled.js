@@ -10,9 +10,3 @@ export const PageWrapper = styled.div`
         padding: 25px;
     }    
 `
-
-export const PageInner = styled.div`
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-`;
