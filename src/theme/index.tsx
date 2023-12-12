@@ -3,7 +3,7 @@ const overflowEllipsis = {
   textOverflow: "ellipsis",
 };
 const baseButton = {
-  fontFamily: "Inter, sans-serif",
+  fontFamily: "Space Grotesk, sans-serif",
   cursor: "pointer",
   "&:disabled": { opacity: 0.75, cursor: "initial" },
 };
@@ -35,9 +35,7 @@ const theme = {
     blue: "#34AFF7"
   },
   fonts: {
-    body: "Inter, sans-serif",
-    bold: "Work Sans Semi, sans-serif",
-    medium: "Work Sans Medium, sans-serif",
+    body: "Space Grotesk, sans-serif",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
@@ -111,7 +109,7 @@ const theme = {
       height: 20,
     },
     select: {
-      fontFamily: "Work Sans",
+      fontFamily: "Space Grotesk, sans-serif",
       color: "primary",
       borderRadius: 0,
       borderColor: "#A9B3BF",
