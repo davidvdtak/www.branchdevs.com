@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 
-jest.mock("./components/ConfigContext");
+jest.mock("./context/Config");
 
 it("renders without crashing", () => {
   const div = document.createElement("div");

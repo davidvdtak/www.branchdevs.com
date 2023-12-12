@@ -1,24 +1,44 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+// containers
+import ForbiddenPage from "./containers/Errors/403";
+import NotFoundPage from "./containers/Errors/404";
+//import ServerErrorPage from "./containers/Errors/500";
+
+
+import Home from "./containers/Home";
+
+// layouts
+import BaseLayout  from "./layouts/BaseLayout";
+
+// misc
+import RenderCompleted  from "./hooks/RenderCompleted";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import React from "react";
 
-import * as React from "react";
 
-import useConfig from "./components/useConfig";
-import logo from "./logo.svg";
+function App() {
+    
+  const isMounted = RenderCompleted();
 
-/**
- * Our Web Application
- */
-export default function App() {
-  const config = useConfig();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Welcome to {config.app.TITLE}</h1>
-      </header>
-      <p className="App-intro">
-        To get started, edit <code>src/App.tsx</code> and save to reload.
-      </p>
-    </div>
+    <>          
+      {isMounted && (
+        <BrowserRouter>
+          <Routes>
+            <Route element={<BaseLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/forbidden" element={<ForbiddenPage />} />
+              <Route path="/*" element={<NotFoundPage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      )}      
+    </>
   );
+  
 }
+
+export default App;

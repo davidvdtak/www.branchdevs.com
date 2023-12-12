@@ -85,26 +85,11 @@ Though we use the same source code for both the server-side and browser renderin
 
 Update the `serverless.yml` with your project name and additional resources you might need. For example, you might want to [create a custom domain name for your app](https://www.serverless.com/plugins/serverless-domain-manager).
 
-### Configuration
-
-The frontend, as well as the server-side code running on AWS Lambda, share a common application configuration. Currently, it is used for injecting the application name from the `public/manifest.json` as well as setting the public hostnames. You can extend the configuration by adding your own variables to `src/server/config.tsx`. They will become available in both your backend and frontend code via the `useConfig` hook:
-
-```js
-import useConfig from "../components/useConfig";
-
-export default function MyComponent() {
-  const config = useConfig();
-  return (
-    // ...
-  )
-}
-```
-
 ### Adding Your Own Code
 
 The boilerplate comes with a preferred folder structure for your project. However, you can change it to your liking. If you decide to do so, make sure to update the respective Webpack and Serverless configurations to point to the new locations.
 
-Generally, you shouldn't need to touch the contents of the `src/browser/` and `src/server/` folders, with exception of updating the configuration. Common components shared across your React site should go into the `src/components/` folder. It currently contains only the `ConfigContext` provider and the `useConfig` hook implementation. Code splitting has already been configured to package these shared components separately from the rest of your application. You might want to place individual web pages or screens of your application into subfolders directly underneath `src/` or next to `App.tsx`.
+Generally, you shouldn't need to touch the contents of the `src/browser/` and `src/server/` folders, with exception of updating the configuration. Common components shared across your React site should go into the `src/components/` folder. 
 
 Images can be loaded directly from the `src/` folder as demonstrated in `App.tsx`. Webpack will automatically manage your images, ensure they use a unique file name and are loaded either from S3 or get embedded directly into the generated HTML if they are small enough. The `public/` folder on the other hand is used for static assets that should retain their original file names and folder structure. All content of this folder will be uploaded to S3 exactly 1:1 and served from there. It is the perfect place to put your `favicon.ico`, `robots.txt`, and similar static assets that you need to reference by a fixed unchanging URL.
 
@@ -155,20 +140,3 @@ npx sls remove
 ```
 
 This will delete all resources but the distribution S3 bucket. As it still contains the bundles you will have to delete the bucket manually for now.
-
-## Changelog
-
-### 2021-10-10
-
-- Updated dependencies to the latest versions. This includes specifically the Webpack Dev Server 4.x.
-- Restructured the project structure to be more consistent. `App.tsx` and related files have been moved out for the `browser` folder directly into `src` as it is used by both the server and the browser rendering. You should rarely need to touch the contents of the `browser` or the `server` folder.
-- Updated the documentation (this file you're currently reading)
-
-### 2021-06-04
-
-- Updated to React 17
-- React "Fast Refresh" (previously known as "Hot Reloading") using the [React Refresh Webpack Plugin](https://github.com/pmmmwh/react-refresh-webpack-plugin).
-- Built-in support for [code splitting](https://webpack.js.org/guides/code-splitting/) and [tree shaking](https://webpack.js.org/guides/tree-shaking/) to optimize page loading times.
-- Full [TypeScript](https://www.typescriptlang.org/) support using Babel 7 and Webpack 5, including custom [module resolution](https://www.typescriptlang.org/docs/handbook/module-resolution.html).
-- Handle server-side errors more gracefully. Update `handler.ts` to add your own custom error handling code such as [Youch](https://github.com/poppinss/youch).
-- Code cleanup and simplification
