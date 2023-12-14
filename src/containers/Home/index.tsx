@@ -1,0 +1,37 @@
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { useConfig } from "../../context/Config";
+import Page from "../../components/Page";
+import SVG from "../../components/SVG";
+import Tree from "../../components/SVG/Tree";
+import BasicButton from "../../components/BasicButton";
+import theme from  "../../theme";
+
+const Home = () =>{
+
+  const config = useConfig(); 
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = config.app.TITLE + " | Dashboard"        
+  },[])
+
+  return (    
+    <Page>  
+      <h1 className="display-1 text-center text-uppercase fw-bold"><span style={{color: theme.colors.primary}}>Branch</span><span style={{color: theme.colors.secondary}}>Devs</span></h1>
+      <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center">        
+        <SVG styles={{width : "350px", maxWidth : "100%", "& path:nth-child(1)" : {animationDelay: ".5s"}, "& path:nth-child(2)" : {animationDelay: "1s"}, "& path:nth-child(3)" : {animationDelay: "1.5s"}}} path={{animation : "fillAnimation 2.5s linear infinite;"}}>
+          <Tree />
+        </SVG>
+        <div className="d-flex gap-4 mt-4">
+          <BasicButton onClick={() => (navigate('/about'))} color={theme.colors.primary} borderColor={theme.colors.primary}>About</BasicButton>          
+          <BasicButton onClick={() => (navigate('/portfolio'))} color={theme.colors.primary} borderColor={theme.colors.primary}>Portfolio</BasicButton>
+          <BasicButton onClick={() => (navigate('/resume'))} color={theme.colors.primary} borderColor={theme.colors.primary}>Resume</BasicButton>          
+        </div>
+      </div>                      
+    </Page>    
+  );            
+};
+
+export default Home;

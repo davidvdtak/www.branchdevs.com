@@ -20,7 +20,7 @@ const BaseLayout = () =>{
       <PageWrapper theme={theme}>
         <Outlet/>
         <div id="footer" className="py-3">
-          <p className="m-0 text-center text-white">© 2020 & Beyond. All Rights Reserved.</p>
+          <p className="m-0 text-center text-light"><small>© 2020 & Beyond. All Rights Reserved.</small></p>
         </div>
       </PageWrapper>
     </>

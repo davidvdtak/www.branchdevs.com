@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-export const LoadingWheelWrap = styled.div`
+interface Props {
+  $customStyles?: {[key: string] : any};
+  theme?: {[key: string] : any};
+}
+
+export const LoadingWheelWrap = styled.div<Props>` 
   display: flex;
   position: relative;
   width: 100%;

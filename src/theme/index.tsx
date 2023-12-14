@@ -10,8 +10,8 @@ const baseButton = {
 
 const theme = {
   colors: {
-    primary: "#2D3648",
-    secondary: "#717D96",
+    primary: "#EC9C54",
+    secondary: "#5DA6D8",
     base_100: "#35312E",
     base_200: "#EDF0F7",
     base_300:"#E2E7F0",

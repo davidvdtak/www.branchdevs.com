@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-export const CardWrap = styled.div`
+interface Props {
+  $customStyles?: {[key: string] : any};
+  theme?: {[key: string] : any};
+}
+
+export const CardWrap = styled.div<Props>` 
   margin-bottom: 20px;
   box-shadow: 0px 4px 12px 0px rgba(113, 125, 150, 0.05);
   & div {

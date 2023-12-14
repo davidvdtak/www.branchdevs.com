@@ -1,6 +1,6 @@
 {
   "short_name": "BranchDevs",
-  "name": "BranchDevs | Custom Development",
+  "name": "BranchDevs Custom Development",
   "icons": [
     {
       "src": "images/favicon-16x16.png",
@@ -24,7 +24,7 @@
     },
     {
       "src": "images/apple-icon.png",
-      "sizes": "182x182",
+      "sizes": "180x180",
       "type": "image/png"
     }
   ],
