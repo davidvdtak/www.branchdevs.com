@@ -18,10 +18,7 @@ const BaseLayout = () =>{
         <link rel="icon" type="image/png" sizes="16x16" href={`${config.app.PUBLIC_URL}/images/favicon-16x16.png`} />
       </Helmet>
       <PageWrapper theme={theme}>
-        <Outlet/>
-        <div id="footer" className="py-3">
-          <p className="m-0 text-center text-light"><small>© 2020 & Beyond. All Rights Reserved.</small></p>
-        </div>
+        <Outlet/>        
       </PageWrapper>
     </>
   )

@@ -14,7 +14,7 @@ const Home = () =>{
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = config.app.TITLE + " | Dashboard"        
+    document.title = config.app.TITLE + " | Home"        
   },[])
 
   return (    
@@ -23,13 +23,13 @@ const Home = () =>{
       <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center">        
         <SVG styles={{width : "350px", maxWidth : "100%", "& path:nth-child(1)" : {animationDelay: ".5s"}, "& path:nth-child(2)" : {animationDelay: "1s"}, "& path:nth-child(3)" : {animationDelay: "1.5s"}}} path={{animation : "fillAnimation 2.5s linear infinite;"}}>
           <Tree />
-        </SVG>
-        <div className="d-flex gap-4 mt-4">
-          <BasicButton onClick={() => (navigate('/about'))} color={theme.colors.primary} borderColor={theme.colors.primary}>About</BasicButton>          
-          <BasicButton onClick={() => (navigate('/portfolio'))} color={theme.colors.primary} borderColor={theme.colors.primary}>Portfolio</BasicButton>
-          <BasicButton onClick={() => (navigate('/resume'))} color={theme.colors.primary} borderColor={theme.colors.primary}>Resume</BasicButton>          
-        </div>
-      </div>                      
+        </SVG>        
+      </div>  
+      <div className="d-flex gap-4 mt-4 justify-content-center align-items-center">
+        <BasicButton onClick={() => (navigate('/about'))} color={theme.colors.primary} borderColor={theme.colors.primary}>About</BasicButton>          
+        <BasicButton onClick={() => (navigate('/portfolio'))} color={theme.colors.primary} borderColor={theme.colors.primary}>Portfolio</BasicButton>
+        <BasicButton onClick={() => (navigate('/resume'))} color={theme.colors.primary} borderColor={theme.colors.primary}>Resume</BasicButton>          
+      </div>                    
     </Page>    
   );            
 };

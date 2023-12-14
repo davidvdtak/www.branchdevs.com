@@ -1,22 +1,24 @@
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// containers
+// errors
 import ForbiddenPage from "./containers/Errors/403";
 import NotFoundPage from "./containers/Errors/404";
 //import ServerErrorPage from "./containers/Errors/500";
-
-
-import Home from "./containers/Home";
 
 // layouts
 import BaseLayout  from "./layouts/BaseLayout";
 
 // misc
-import RenderCompleted  from "./hooks/RenderCompleted";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import React from "react";
+import RenderCompleted  from "./hooks/RenderCompleted";
+
+// containers
+import Home from "./containers/Home";
+import About from "./containers/About";
+import Portfolio from "./containers/Portfolio";
+import Resume from "./containers/Resume";
 
 
 function App() {
@@ -26,10 +28,13 @@ function App() {
   return (
     <>          
       {isMounted && (
-        <BrowserRouter>
+        <BrowserRouter basename={'/dev'}>
           <Routes>
             <Route element={<BaseLayout />}>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/resume" element={<Resume />} />
               <Route path="/forbidden" element={<ForbiddenPage />} />
               <Route path="/*" element={<NotFoundPage />} />
             </Route>

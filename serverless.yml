@@ -14,6 +14,10 @@ provider:
   timeout: 6
   logRetentionInDays: 7
 
+
+  apiGateway:
+    shouldStartNameWithService: true # for upcoming Serverless v3
+
   environment:
     SERVERLESS_PROJECT: ${self:service}
     SERVERLESS_REGION: ${self:provider.region}
@@ -21,7 +25,14 @@ provider:
 
     APP_DIST_URL: ${self:custom.distBucketUrl.${self:provider.region}, self:custom.distBucketUrl.default}
     APP_PUBLIC_URL: ${self:custom.distBucketUrl.${self:provider.region}, self:custom.distBucketUrl.default}
-
+    APIGATEWAY_URL:
+      Fn::Join:
+        - ""
+        - - https://
+          - Ref: ApiGatewayRestApi
+          - .execute-api.
+          - Ref: AWS::Region
+          - .amazonaws.com        
 
 plugins:
   - serverless-webpack
@@ -91,6 +102,13 @@ custom:
 
 resources:
   Resources:
+    # Customize the API Gateway resource
+    ApiGatewayRestApi:
+      Type: AWS::ApiGateway::RestApi
+      Properties:
+        # Enable gzip compression
+        MinimumCompressionSize: 1000
+
     # S3 Bucket for the distribution bundles
     DistBucket:
       Type: AWS::S3::Bucket
@@ -107,6 +125,11 @@ resources:
               MaxAge: 3000
 
   Outputs:
+    ApiGatewayRestApi:
+      Description: API Gateway Endpoint
+      Value:
+        Ref: ApiGatewayRestApi
+
     DistBucket:
       Description: Distribution S3 Bucket
       Value:
