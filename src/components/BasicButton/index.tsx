@@ -16,6 +16,7 @@ interface Props {
   margin?: string;
   paddingX?: string;
   paddingY?: string;
+  active?: boolean;
   submitting?: boolean;
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
@@ -33,6 +34,7 @@ const BasicButton: React.FC<Props> = ({
   margin,
   paddingX,
   paddingY,
+  active,
   submitting,
   onClick
 }) => {
@@ -50,6 +52,7 @@ const BasicButton: React.FC<Props> = ({
         paddingX: paddingX,
         paddingY: paddingY,
       }}
+      $active={active}
       $submitting={submitting}
     >
       <button

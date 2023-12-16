@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface Props {
   $customStyles?: {[key: string] : any};
+  $active?: boolean;
   $submitting?: boolean;
 }
 
@@ -28,18 +29,23 @@ export const ButtonWrap = styled.div<Props>`
     &:hover{
       background-color: ${(props) => props?.$customStyles?.bgColor};
       border-color: ${(props) => props?.$customStyles?.borderColor};
-      opacity:0.8;
       color: ${(props) => props?.$customStyles?.color};
+      opacity:0.7;
     }
     &:active{
-      background-color: ${(props) => props?.$customStyles?.bgColor} !important;
-      border-color: ${(props) => props?.$customStyles?.borderColor} !important;
-      opacity:0.8;
+      background-color: ${(props) => props?.$customStyles?.bgColor};
+      border-color: ${(props) => props?.$customStyles?.borderColor};
+      color: ${(props) => props?.$customStyles?.color};
+      opacity:0.7;
     }
     &:disabled{
-      color: transparent!important;
-      background-color: ${(props) => props?.$customStyles?.bgColor} !important;
-      border-color: ${(props) => props?.$customStyles?.borderColor} !important;
+      background-color: ${(props) => props?.$customStyles?.bgColor};
+      border-color: ${(props) => props?.$customStyles?.borderColor};
+      color: ${(props) => props?.$customStyles?.color};
+      opacity:0.3;
     }
+    ${(props) => props?.$active ? `
+      opacity:0.5;
+    ` : ``}
   }
 `;

@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
-import { PageWrapper } from "./styled";
-
+import { PageWrapper, PageInner } from "./styled";
+import theme from "../../theme";
+import transition from "./transition";
 
 interface Props {
   children: ReactNode;
@@ -9,11 +10,16 @@ interface Props {
 const Page: React.FC<Props> = ({ 
   children
 }) => {
+  
   return (
-    <PageWrapper>        
-      {children}      
+    <PageWrapper    
+      theme={theme}
+    >
+      <PageInner>        
+        {children}      
+      </PageInner>
     </PageWrapper>
   )
 }
 
-export default Page;
+export default transition(Page);

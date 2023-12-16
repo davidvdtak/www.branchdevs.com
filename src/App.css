@@ -8,6 +8,28 @@ html, body { margin: 0; padding: 0; scroll-behavior: smooth; font-size: 16px; li
   50% { opacity: .1; }  
 }
 
+
+.slide-in {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  bottom: 0;
+  background-color: #222;
+  transform-origin: bottom;
+}
+
+
+.slide-out {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  bottom: 0;
+  background-color: #222;
+  transform-origin: top;
+}
+
 /* FONTAWESOME FIX */
 .fa, .fa-brands, .fa-classic, .fa-duotone, .fa-light, 
 .fa-regular, .fa-sharp, .fa-sharp-solid, .fa-solid, .fa-thin, 

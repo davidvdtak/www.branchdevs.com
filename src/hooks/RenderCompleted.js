@@ -7,6 +7,7 @@ const RenderCompleted = () => {
             setMounted(false)
         }
     }, [])
+
     return mounted
 }
 export default RenderCompleted;
