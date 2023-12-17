@@ -1,12 +1,12 @@
-import React from "react";
-import { PageWrapper } from "./styled";
+import React, { forwardRef } from "react";
+import { BaseWrapper } from "./styled";
 import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import theme from "../theme";
 import { useConfig } from "../context/Config";
 import NavLayout from "./NavLayout";
 
-const BaseLayout = () =>{
+const BaseLayout = forwardRef<HTMLDivElement>(({ children }, ref) => {
 
   const config = useConfig(); 
 
@@ -18,13 +18,17 @@ const BaseLayout = () =>{
         <link rel="icon" type="image/png" sizes="32x32" href={`${config.app.PUBLIC_URL}/images/favicon-32x32.png`} />    
         <link rel="icon" type="image/png" sizes="16x16" href={`${config.app.PUBLIC_URL}/images/favicon-16x16.png`} />
       </Helmet>
-      <PageWrapper                     
+      <BaseWrapper  
+          ref={ref}                   
           theme={theme}
         >
           <NavLayout />
-          <Outlet/>        
-      </PageWrapper>
+          <div className="position-relative flex-grow-1 d-flex flex-column overflow-hidden">
+            <Outlet/>        
+          </div>
+      </BaseWrapper>
     </>
   )
-}
+});
+
 export default BaseLayout;

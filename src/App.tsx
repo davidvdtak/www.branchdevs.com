@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { BrowserRouter, Route, Routes, useLocation, useRoutes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"
 
@@ -21,21 +21,22 @@ import About from "./containers/About";
 import Portfolio from "./containers/Portfolio";
 import Resume from "./containers/Resume";
 
-function RoutesWithAnimation() {
+const RoutesWithAnimation = forwardRef(({ children }, ref) => {
   const location = useLocation();
 
   return (
-    <Routes location={location} key={location.pathname}>    
-      <Route index element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/resume" element={<Resume />} />
-      {/* 404 page */}
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
-  )
-  ;
-}
+    <AnimatePresence mode="popLayout">
+        <Routes location={location} key={location.pathname}>    
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/resume" element={<Resume />} />
+          {/* 404 page */}
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>      
+    </AnimatePresence>
+  )  
+})
 
 function App() {
   const isMounted = RenderCompleted();
@@ -47,9 +48,7 @@ function App() {
           <Routes>
             <Route element={<BaseLayout />}>
               <Route path="*" element={(
-                <AnimatePresence mode="wait">
-                  <RoutesWithAnimation />
-                </AnimatePresence>
+                <RoutesWithAnimation />                
               )} />
             </Route>
           </Routes>
