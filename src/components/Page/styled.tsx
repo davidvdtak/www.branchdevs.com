@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from 'framer-motion';
 
-export const PageWrapper = styled(motion.div)`
+export const PageWrapper = styled.div`
   background: ${props => props.theme.colors.base_200};
   flex-grow: 1;
   display: flex;
@@ -17,4 +17,12 @@ export const PageInner = styled.div`
   @media (max-width: 991px)  {    
     padding: 25px;
   }    
+`;
+
+export const PageTransition = styled(motion.div)`
+  position: absolute;
+  display: none;
+  left: 0%;
+  top: 0%;     
+  background: ${props => props.theme.colors.primary};
 `;

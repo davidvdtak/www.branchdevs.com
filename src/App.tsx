@@ -25,7 +25,7 @@ const RoutesWithAnimation = forwardRef(({ children }, ref) => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="popLayout">
+    <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>    
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
