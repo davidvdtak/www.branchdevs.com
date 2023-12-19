@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 export const PageWrapper = styled.div`
-  background: ${props => props.theme.colors.base_200};
+  background: ${props => props.theme.colors.base_100};
+  color: #fafafa;
   flex-grow: 1;
   display: flex;
   flex-direction: column;  

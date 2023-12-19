@@ -13,7 +13,7 @@ const theme = {
     primary: "#EC9C54",
     secondary: "#5DA6D8",
     base_100: "#35312E",
-    base_200: "#EDF0F7",
+    base_200: "#644a37",
     base_300:"#E2E7F0",
     base_400: "#CBD2E0",
     base_500: "#A0ABC0",

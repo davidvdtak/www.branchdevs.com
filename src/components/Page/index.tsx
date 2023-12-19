@@ -1,5 +1,4 @@
 import React, { forwardRef, useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { PageWrapper, PageInner, PageTransition } from "./styled";
 import theme from "../../theme";
 
