@@ -4,10 +4,37 @@ html, body { margin: 0; padding: 0; scroll-behavior: smooth; font-size: 16px; li
 
 #root {min-height: 100%; display: flex; flex-direction: column; flex-grow: 1;}
 
-@keyframes fillAnimation {
-  50% { opacity: .1; }  
+@keyframes fillAnimation1 {
+  0% { fill: #9e73c8; }  
+  25% { fill: #5DA6D8; }  
+  50% { fill: #ec9c54; }
+  75% { fill: #7bb59a; }
+  100% { fill: #9e73c8; }  
 }
 
+@keyframes fillAnimation2 {  
+  0% { fill: #5DA6D8; }  
+  25% { fill: #ec9c54; }
+  50% { fill: #7bb59a; }
+  75% { fill: #9e73c8; }
+  100% { fill: #5DA6D8; }   
+}
+
+@keyframes fillAnimation3 {      
+  0% { fill: #ec9c54; }
+  25% { fill: #7bb59a; }
+  50% { fill: #9e73c8; }
+  75% { fill: #5DA6D8; }   
+  100% { fill: #ec9c54; }
+}
+
+@keyframes fillAnimation4 {        
+  0% { fill: #7bb59a; }
+  25% { fill: #9e73c8; }
+  50% { fill: #5DA6D8; }   
+  75% { fill: #ec9c54; }
+  100% { fill: #7bb59a; }
+}
 
 .slide-in {
   position: fixed;

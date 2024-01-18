@@ -1,14 +1,16 @@
 import React, { forwardRef } from "react";
-import { BaseWrapper } from "./styled";
-import { Outlet } from "react-router-dom";
+import { BaseInner, BaseWrapper, NavBar } from "./styled";
+import { Outlet, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import theme from "../theme";
 import { useConfig } from "../context/Config";
 import NavLayout from "./NavLayout";
+import BasicButton from "src/components/BasicButton";
 
 const BaseLayout = forwardRef<HTMLDivElement>(({ children }, ref) => {
 
   const config = useConfig(); 
+  const navigate = useNavigate();
 
   return (    
     <>
@@ -23,9 +25,18 @@ const BaseLayout = forwardRef<HTMLDivElement>(({ children }, ref) => {
           theme={theme}
         >
           <NavLayout />
-          <div className="position-relative flex-grow-1 d-flex flex-column overflow-hidden">
+          <NavBar>  
+            <div className="container">
+              <div className="d-flex flex-grow flex-row gap-3 flex-wrap justify-content-end align-items-center p-2">                
+                <BasicButton onClick={() => (navigate('/'))} color={theme.colors.primary} borderColor={"transparent"}>Home</BasicButton>
+                <BasicButton onClick={() => (navigate('/portfolio'))} color={theme.colors.primary} borderColor={"transparent"}>Portfolio</BasicButton>
+                <BasicButton onClick={() => (navigate('/resume'))} color={theme.colors.primary} borderColor={"transparent"}>Resume</BasicButton>
+              </div>
+            </div>
+          </NavBar>
+          <BaseInner>          
             <Outlet/>        
-          </div>
+          </BaseInner>
       </BaseWrapper>
     </>
   )

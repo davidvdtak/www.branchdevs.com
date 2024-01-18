@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import theme from "../theme";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { NavBackground, NavWrapper } from "./styled";
 import { motion } from "framer-motion"
 import { MenuToggle } from "src/components/MenuToggle";
@@ -8,7 +8,7 @@ import MenuLink from "src/components/MenuLink";
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    clipPath: `circle(${height * 2 + 200}px at 32px 27px)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -16,7 +16,7 @@ const sidebar = {
     }
   }),
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
+    clipPath: "circle(20px at 32px 27px)",
     transition: {      
       type: "spring",
       stiffness: 400,
@@ -64,7 +64,11 @@ const NavLayout = () =>{
   return ( 
     <NavWrapper theme={theme}>
       <MenuToggle toggle={() => setIsOpen(!isOpen)} active={isOpen} />
-      <NavBackground animate={isOpen ? "open" : "closed"} variants={sidebar} theme={theme}>      
+      <NavBackground animate={isOpen ? "open" : "closed"} variants={sidebar} theme={theme}>    
+        <span className="d-block h3 text-center text-uppercase fw-bold">
+          <span style={{color: theme.colors.primary}}>Branch</span>
+          <span style={{color: theme.colors.secondary}}>Devs</span>
+        </span> 
         <motion.nav
           animate={isOpen ? "open" : "closed"}
           variants={NavOptions}
@@ -72,9 +76,6 @@ const NavLayout = () =>{
           <motion.ul variants={NavUlOptions}>
             <motion.li variants={NavLiOptions}>
               <MenuLink link="/" label="Home" />
-            </motion.li>  
-            <motion.li variants={NavLiOptions}>
-              <MenuLink link="/about" label="About" />
             </motion.li>  
             <motion.li variants={NavLiOptions}>
               <MenuLink link="/portfolio" label="Portfolio" />

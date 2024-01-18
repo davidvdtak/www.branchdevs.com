@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 
 import { useConfig } from "../../context/Config";
 import Page from "../../components/Page";
-import theme from  "../../theme";
 
 const Portfolio = () =>{
 
@@ -10,15 +9,40 @@ const Portfolio = () =>{
 
   useEffect(() => {
     document.title = config.app.TITLE + " | Portfolio"        
-  },[])
+  },[config.app.TITLE])
 
   return (    
     <Page>  
-      <h1 className="display-1 text-center text-uppercase fw-bold"><span style={{color: theme.colors.primary}}>Branch</span><span style={{color: theme.colors.secondary}}>Devs</span></h1>
-      <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center">        
-
-        
-      </div>                      
+      <div className="overflow-hidden">
+        <div className="row g-4 mb-4">        
+          <div className="col-lg-6 order-lg-0 bg-white"></div>
+          <div className="col-lg-6 order-lg-1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div className="row g-4 mb-4">        
+          <div className="col-lg-6 order-lg-1 bg-white"></div>
+          <div className="col-lg-6 order-lg-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div className="row g-4 mb-4">        
+          <div className="col-lg-6 order-lg-0 bg-white"></div>
+          <div className="col-lg-6 order-lg-1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div className="row g-4 mb-4">        
+          <div className="col-lg-6 order-lg-1 bg-white"></div>
+          <div className="col-lg-6 order-lg-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>                      
+      </div>
     </Page>    
   );            
 };

@@ -10,8 +10,8 @@ export const Button = styled.button`
   -moz-user-select: none;
   -ms-user-select: none;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 25px;
   border-radius: 50%;
   background: transparent;
 `;

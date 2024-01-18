@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { BrowserRouter, Route, Routes, useLocation, useRoutes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"
 
 // errors
@@ -12,12 +12,11 @@ import BaseLayout  from "./layouts/BaseLayout";
 
 // misc
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import "./App.scss";
 import RenderCompleted  from "./hooks/RenderCompleted";
 
 // containers
 import Home from "./containers/Home";
-import About from "./containers/About";
 import Portfolio from "./containers/Portfolio";
 import Resume from "./containers/Resume";
 
@@ -28,7 +27,6 @@ const RoutesWithAnimation = forwardRef(({ children }, ref) => {
     <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>    
           <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/resume" element={<Resume />} />
           {/* 404 page */}

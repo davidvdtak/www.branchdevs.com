@@ -10,6 +10,21 @@ export const BaseWrapper = styled.div`
   flex-direction: column;
 `;
 
+export const BaseInner = styled.div`
+  position: relative!important;
+  display: flex!important;
+  flex-grow: 1!important;
+  flex-direction: column!important;
+  overflow: hidden!important
+`;
+
+export const NavBar = styled.div`
+  display: none;
+  @media (min-width: 992px)  {    
+    display: block;
+  }
+`;
+
 
 export const NavWrapper = styled.div`
   position: fixed;
