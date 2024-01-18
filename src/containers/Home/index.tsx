@@ -1,18 +1,16 @@
 import React, { useEffect } from "react";
 import theme from "../../theme";
 
-import { useConfig } from "../../context/Config";
 import Page from "../../components/Page";
 import SVG from "../../components/SVG";
 import Tree from "../../components/SVG/Tree";
 
 const Home = () => {
 
-  const config = useConfig(); 
 
   useEffect(() => {
-    document.title = config.app.TITLE + " | Home"        
-  },[config.app.TITLE])
+    document.title = process.env.REACT_APP_NAME + " | Home"        
+  },[])
 
   return (    
     <Page>  
