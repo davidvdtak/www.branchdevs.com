@@ -1,15 +1,12 @@
 import React, { useEffect } from "react";
 
-import { useConfig } from "../../context/Config";
 import Page from "../../components/Page";
 
 const Portfolio = () =>{
 
-  const config = useConfig(); 
-
   useEffect(() => {
-    document.title = config.app.TITLE + " | Portfolio"        
-  },[config.app.TITLE])
+    document.title = process.env.REACT_APP_NAME + " | Portfolio"        
+  },[])
 
   return (    
     <Page>  
