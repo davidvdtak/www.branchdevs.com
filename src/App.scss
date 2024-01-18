@@ -1,51 +1,6 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-html, body {height: 100%; min-height: 100%; margin: 0;}
-
-body{
-  font-family: Inter;
-  background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  //background-color: #EDF0F7;
-}
+html, body { margin: 0; padding: 0; scroll-behavior: smooth; font-size: 16px; line-height: 1.45; font-family: 'Space Grotesk', sans-serif; font-weight: 400; color: #222; height: 100%;}
 
 #root {min-height: 100%; display: flex; flex-direction: column; flex-grow: 1;}
 
@@ -56,13 +11,6 @@ body{
 p{
   //color:white;
   margin-bottom:2rem;
-}
-
-h2{
-  font-size:1.5rem;
-  font-weight:600;
-  margin-bottom:1rem;
-  letter-spacing:-.5px;
 }
 
 .fade_in {
@@ -88,3 +36,62 @@ h2{
 .modal .modal-footer {padding: 1rem 1.875rem}
 .modal .modal-footer>div {margin: 0;}
 
+.slide-in {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  bottom: 0;
+  background-color: #222;
+  transform-origin: bottom;
+}
+
+
+.slide-out {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  right: 0;
+  bottom: 0;
+  background-color: #222;
+  transform-origin: top;
+}
+
+/* ANIMATIONS */
+
+@keyframes fillAnimation1 {
+  0% { fill: #9e73c8; }  
+  25% { fill: #5DA6D8; }  
+  50% { fill: #ec9c54; }
+  75% { fill: #7bb59a; }
+  100% { fill: #9e73c8; }  
+}
+
+@keyframes fillAnimation2 {  
+  0% { fill: #5DA6D8; }  
+  25% { fill: #ec9c54; }
+  50% { fill: #7bb59a; }
+  75% { fill: #9e73c8; }
+  100% { fill: #5DA6D8; }   
+}
+
+@keyframes fillAnimation3 {      
+  0% { fill: #ec9c54; }
+  25% { fill: #7bb59a; }
+  50% { fill: #9e73c8; }
+  75% { fill: #5DA6D8; }   
+  100% { fill: #ec9c54; }
+}
+
+@keyframes fillAnimation4 {        
+  0% { fill: #7bb59a; }
+  25% { fill: #9e73c8; }
+  50% { fill: #5DA6D8; }   
+  75% { fill: #ec9c54; }
+  100% { fill: #7bb59a; }
+}
+
+/* FONTAWESOME FIX */
+.fa, .fa-brands, .fa-classic, .fa-duotone, .fa-light, 
+.fa-regular, .fa-sharp, .fa-sharp-solid, .fa-solid, .fa-thin, 
+.fab, .fad, .fal, .far, .fas, .fasr, .fass, .fat {line-height: inherit;}

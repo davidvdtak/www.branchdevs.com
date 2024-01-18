@@ -6,7 +6,7 @@ import theme from "../theme";
 import NavLayout from "./NavLayout";
 import BasicButton from "src/components/BasicButton";
 
-const BaseLayout = forwardRef<HTMLDivElement>(({ children }, ref) => {
+const BaseLayout = forwardRef<HTMLDivElement>(() => {
 
   const navigate = useNavigate();
 
@@ -19,7 +19,6 @@ const BaseLayout = forwardRef<HTMLDivElement>(({ children }, ref) => {
         <link rel="icon" type="image/png" sizes="16x16" href={`${process.env.REACT_APP_BASEURL}/images/favicon-16x16.png`} />
       </Helmet>
       <BaseWrapper  
-          ref={ref}                   
           theme={theme}
         >
           <NavLayout />

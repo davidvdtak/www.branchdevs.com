@@ -20,7 +20,7 @@ import Home from "./containers/Home";
 import Portfolio from "./containers/Portfolio";
 import Resume from "./containers/Resume";
 
-const RoutesWithAnimation = forwardRef(({ children }, ref) => {
+const RoutesWithAnimation = forwardRef(() => {
   const location = useLocation();
 
   return (
