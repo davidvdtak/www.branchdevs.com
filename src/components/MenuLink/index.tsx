@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+import React from "react";
 import { NavLinkWrapper, LinkText } from "./styled";
 import { Link, useLocation } from "react-router-dom";
 import theme from "../../theme";
