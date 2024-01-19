@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,500&display=swap');
 
 $primary: #EC9C54;
 $primary-dark: darken($primary, 10%);
@@ -11,7 +11,7 @@ $secondary-light: lighten($secondary, 10%);
 @import "~bootstrap/scss/bootstrap";
 
 
-html, body { margin: 0; padding: 0; scroll-behavior: smooth; font-size: 16px; line-height: 1.45; font-family: 'Space Grotesk', sans-serif; font-weight: 400; color: #222; height: 100%;}
+html, body { margin: 0; padding: 0; scroll-behavior: smooth; font-size: 16px; line-height: 1.45; font-family: "Montserrat", sans-serif; font-weight: 400; color: #222; height: 100%;}
 
 #root {min-height: 100%; display: flex; flex-direction: column; flex-grow: 1;}
 
@@ -19,13 +19,12 @@ html, body { margin: 0; padding: 0; scroll-behavior: smooth; font-size: 16px; li
   outline:none !important;
 }
 
-p{
-  //color:white;
-  margin-bottom:2rem;
+h1, h2, h3, .h1, .h2, .h3 {
+  font-weight: 600;
 }
 
-h1, h2, h3, .h1, .h2, .h3 {
-  font-family: -apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+p{
+  margin-bottom:2rem;
 }
 
 .fade_in {
@@ -41,7 +40,20 @@ h1, h2, h3, .h1, .h2, .h3 {
   transition: visibility 0s 0.5s, opacity 0.5s linear, top 0.5s;
 }
 
+.badge {font-weight: 600;}
+
+.bg-primary {color: #35312E}
+
 .align-items-stretch .card {min-height: 100%;}
+
+.fw-900 {font-weight: 900!important;}
+.fw-800 {font-weight: 800!important;}
+.fw-700 {font-weight: 700!important;}
+.fw-600 {font-weight: 600!important;}
+.fw-500 {font-weight: 500!important;}
+.fw-400 {font-weight: 400!important;}
+.fw-300 {font-weight: 300!important;}
+.fw-200 {font-weight: 200!important;}
 
 .modal .modal-header {padding: 1rem 1.875rem}
 .modal .modal-body {
@@ -105,8 +117,3 @@ h1, h2, h3, .h1, .h2, .h3 {
   75% { fill: #ec9c54; }
   100% { fill: #7bb59a; }
 }
-
-/* FONTAWESOME FIX */
-.fa, .fa-brands, .fa-classic, .fa-duotone, .fa-light, 
-.fa-regular, .fa-sharp, .fa-sharp-solid, .fa-solid, .fa-thin, 
-.fab, .fad, .fal, .far, .fas, .fasr, .fass, .fat {line-height: inherit;}

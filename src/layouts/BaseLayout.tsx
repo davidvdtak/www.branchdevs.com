@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { BaseInner, BaseWrapper, NavBar } from "./styled";
 import { Outlet, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -6,7 +6,7 @@ import theme from "../theme";
 import NavLayout from "./NavLayout";
 import BasicButton from "src/components/BasicButton";
 
-const BaseLayout = forwardRef<HTMLDivElement>(() => {
+const BaseLayout = () => {
 
   const navigate = useNavigate();
 
@@ -37,6 +37,6 @@ const BaseLayout = forwardRef<HTMLDivElement>(() => {
       </BaseWrapper>
     </>
   )
-});
+};
 
 export default BaseLayout;

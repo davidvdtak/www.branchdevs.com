@@ -12,7 +12,7 @@ const Resume = () =>{
     <Page>  
       <PageInner>
         <div className="container">
-          <h2>Work Experience</h2>
+          <h2 className="mb-4">Work Experience</h2>
           <div className="blockquote">
             <h3 className="text-primary">Lead Developer / Chief Development Officer</h3>
             <h5 className="text-secondary">Zaronology Inc, October 2020 to Present</h5>
@@ -38,33 +38,33 @@ const Resume = () =>{
         styles={{background: theme.colors.base_500, color: theme.colors.base_100}}
       >
         <div className="container pb-4">
-          <h2 className="text-center">Skills</h2>    
+          <h2 className="mb-4 text-center">Skills</h2>    
           <div className="d-flex flex-wrap gap-4 fs-4 justify-content-center align-items-center">          
-            <span className="badge bg-primary">Node.js <small className="badge text-bg-light">(3 years)</small></span>
-            <span className="badge bg-primary">TypeScript <small className="badge text-bg-light">(3 years)</small></span>
-            <span className="badge bg-primary">React <small className="badge text-bg-light">(3 years)</small></span>
-            <span className="badge bg-primary">NestJS <small className="badge text-bg-light">(1 year)</small></span>
-            <span className="badge bg-primary">NextJS <small className="badge text-bg-light">(1 year)</small></span>          
-            <span className="badge bg-primary">PHP <small className="badge text-bg-light">(11 years)</small></span> 
-            <span className="badge bg-primary">PHP Laravel <small className="badge text-bg-light">(5 years)</small></span>         
-            <span className="badge bg-primary">WordPress <small className="badge text-bg-light">(11 years)</small></span>                    
-            <span className="badge bg-primary">jQuery <small className="badge text-bg-light">(11 years)</small></span>          
-            <span className="badge bg-primary">CSS <small className="badge text-bg-light">(11 years)</small></span>
-            <span className="badge bg-primary">MySQL <small className="badge text-bg-light">(11 years)</small></span>
-            <span className="badge bg-primary">AJAX <small className="badge text-bg-light">(11 years)</small></span>
-            <span className="badge bg-primary">HTML5 <small className="badge text-bg-light">(11 years)</small></span>          
-            <span className="badge bg-primary">CSS <small className="badge text-bg-light">(11 years)</small></span>
-            <span className="badge bg-primary">Javascript <small className="badge text-bg-light">(11 years)</small></span>
-            <span className="badge bg-primary">Bootstrap <small className="badge text-bg-light">(10 years)</small></span>
-            <span className="badge bg-primary">JavaScript <small className="badge text-bg-light">(8 years)</small></span>
-            <span className="badge bg-primary">APIs <small className="badge text-bg-light">(8 years)</small></span>          
-            <span className="badge bg-primary">JSON <small className="badge text-bg-light">(8 years)</small></span>                              
-            <span className="badge bg-primary">REST <small className="badge text-bg-light">(8 years)</small></span>          
-            <span className="badge bg-primary">Git <small className="badge text-bg-light">(8 years)</small></span>          
+            <span className="badge bg-primary">Node.js</span>
+            <span className="badge bg-primary">TypeScript</span>
+            <span className="badge bg-primary">React</span>
+            <span className="badge bg-primary">NestJS</span>
+            <span className="badge bg-primary">NextJS</span>          
+            <span className="badge bg-primary">PHP</span> 
+            <span className="badge bg-primary">PHP Laravel</span>         
+            <span className="badge bg-primary">WordPress</span>                    
+            <span className="badge bg-primary">jQuery</span>          
+            <span className="badge bg-primary">CSS</span>
+            <span className="badge bg-primary">MySQL</span>
+            <span className="badge bg-primary">AJAX</span>
+            <span className="badge bg-primary">HTML5</span>          
+            <span className="badge bg-primary">CSS</span>
+            <span className="badge bg-primary">Javascript</span>
+            <span className="badge bg-primary">Bootstrap</span>
+            <span className="badge bg-primary">JavaScript</span>
+            <span className="badge bg-primary">APIs</span>          
+            <span className="badge bg-primary">JSON</span>                              
+            <span className="badge bg-primary">REST</span>          
+            <span className="badge bg-primary">Git</span>          
           </div>
         </div>
         <div className="container pt-4">
-          <h2 className="text-center">Selection of API integrations</h2>    
+          <h2 className="mb-4 text-center">Selection of API integrations</h2>    
           <div className="d-flex flex-wrap gap-4 fs-4 justify-content-center align-items-center"> 
             <span className="badge bg-secondary">Stripe</span>
             <span className="badge bg-secondary">PayPal</span>

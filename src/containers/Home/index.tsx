@@ -16,7 +16,7 @@ const Home = () => {
     <Page>  
       <PageInner>
         <div className="d-flex flex-column flex-grow-1 justify-content-center align-items-center">     
-          <h1 className="display-1 text-center text-uppercase fw-bold">
+          <h1 className="display-1 text-center text-uppercase fw-800">
             <span style={{color: theme.colors.primary}}>Branch</span>
             <span style={{color: theme.colors.secondary}}>Devs</span>
           </h1>   

@@ -71,7 +71,7 @@ const NavLayout = () =>{
         animate={isOpen ? "open" : "closed"} 
         variants={sidebar} 
       >    
-        <span className="d-block h3 text-center text-uppercase fw-bold">
+        <span className="d-block h3 text-center text-uppercase fw-800">
           <span style={{color: theme.colors.primary}}>Branch</span>
           <span style={{color: theme.colors.secondary}}>Devs</span>
         </span> 

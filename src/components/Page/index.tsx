@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PageWrapper, PageInnerStyle, PageTransition } from "./styled";
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
   [key: string]: any;
 }
 
-const Page = forwardRef<HTMLDivElement, Props>(({ children, styles }) => {
+const Page = (({ children, styles }: Props) => {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
 
   const exits = [
