@@ -1,6 +1,5 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import { PageWrapper, PageInner, PageTransition } from "./styled";
-import theme from "../../theme";
 
 interface Props {
   children: React.ReactNode;
@@ -8,6 +7,28 @@ interface Props {
 
 const Page = forwardRef<HTMLDivElement, Props>(({ children }, ref) => {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
+
+  const exits = [
+    { 
+      display: "block",
+      opacity: [1,1],
+      width: ["0%", "55%", "25%", "40%", "100%"],
+      paddingTop: ["0%", "55%", "25%", "40%", "100%"],      
+      borderRadius: ["100%", "100%", "100%", "100%", "0%"],
+      transition: { duration: 1.5 } 
+    },
+    { 
+      display: "block",
+      opacity: [1,1],
+      width: ["0%", "30%", "40%", "50%", "100%"],
+      paddingTop: ["0%", "15%", "20%", "35%", "100%"],      
+      borderRadius: ["100%", "0%"],
+      rotate: [0, 0, 270, 270, 0],
+      transition: { duration: 1.5 } 
+    }
+  ]
+  const eIndex = Math.floor(Math.random() * exits.length);
+
 
   useEffect(() => {
     // Set a timeout to hide the overlay after a certain duration (e.g., 2 seconds)
@@ -19,33 +40,21 @@ const Page = forwardRef<HTMLDivElement, Props>(({ children }, ref) => {
 
   return (
     <>
-      <PageWrapper theme={theme}>
+      <PageWrapper>
         <PageInner>{children}</PageInner>
       </PageWrapper>
       {isOverlayVisible &&
-        <PageTransition 
-          ref={ref}
-          initial={{ display: "block", opacity: 1, width: "100%", height: '100%'}}
-          animate={{ opacity: 0, transition: { duration: 1.5, delay: .25 }}}
-          theme={theme}
+        <PageTransition           
+          initial={{ display: "block", opacity: 1, top: 0, left: 0, right: 0, bottom: 0 }}
+          animate={{ opacity: 0, transition: { duration: .5 }}}
         />    
       }
-      <PageTransition 
-          ref={ref}
-          initial={{ display: "none", opacity: 0}}
-          exit={{ 
-            display: "block",
-            opacity: 1,
-            width: ["0%", "50%", "30%", "40%", "100%"],
-            height: ["0%", "50%", "30%", "40%", "100%"],
-            top: ["50%","25%", "35%","30%","0%"],
-            left: ["50%","25%", "35%","30%","0%"],
-            borderRadius: ["100%", "0%"],
-            rotate: [0, 0, 270, 270, 0],
-            transition: { duration: 1.5 } 
-          }}
-          theme={theme}
-        /> 
+      <PageTransition         
+        initial={{ justifyContent: "center", alignItems: "center", top: 0, left: 0, right: 0, bottom: 0, background: "transparent"}}
+        exit={{ display: "flex"}}
+      >
+        <PageTransition exit={exits[eIndex]} /> 
+      </PageTransition>
     </>
   );
 });

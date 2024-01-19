@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
+$primary: #EC9C54;
+$primary-dark: darken($primary, 10%);
+$primary-light: lighten($primary, 10%);
+
+$secondary: #5DA6D8;
+$secondary-dark: darken($secondary, 10%);
+$secondary-light: lighten($secondary, 10%);
+
+@import "~bootstrap/scss/bootstrap";
+
+
 html, body { margin: 0; padding: 0; scroll-behavior: smooth; font-size: 16px; line-height: 1.45; font-family: 'Space Grotesk', sans-serif; font-weight: 400; color: #222; height: 100%;}
 
 #root {min-height: 100%; display: flex; flex-direction: column; flex-grow: 1;}

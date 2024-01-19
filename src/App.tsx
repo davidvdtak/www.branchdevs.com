@@ -11,7 +11,6 @@ import NotFoundPage from "./containers/Errors/404";
 import BaseLayout  from "./layouts/BaseLayout";
 
 // misc
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
 import RenderCompleted  from "./hooks/RenderCompleted";
 

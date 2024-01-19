@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { motion } from 'framer-motion';
+import theme from "../../theme";
 
 export const PageWrapper = styled.div`
-  background: ${props => props.theme.colors.base_100};
+  background: ${theme.colors.base_100};
   color: #fafafa;
   flex-grow: 1;
   display: flex;
@@ -21,9 +22,7 @@ export const PageInner = styled.div`
 `;
 
 export const PageTransition = styled(motion.div)`
-  position: absolute;
-  display: none;
-  left: 0%;
-  top: 0%;     
-  background: ${props => props.theme.colors.primary};
+  background: ${theme.colors.primary};
+  position: fixed;
+  display: none;    
 `;

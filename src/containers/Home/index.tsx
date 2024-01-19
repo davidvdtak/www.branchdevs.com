@@ -19,7 +19,7 @@ const Home = () => {
           <span style={{color: theme.colors.primary}}>Branch</span>
           <span style={{color: theme.colors.secondary}}>Devs</span>
         </h1>   
-        <SVG styles={{width : "400px", maxWidth : "100%", "& path:nth-child(0)" : {animation : "fillAnimation2 4s linear infinite;"}, "& path:nth-child(1)" : {animation : "fillAnimation2 4s linear infinite;"}, "& path:nth-child(2)" : {animation : "fillAnimation3 4s linear infinite;"}, "& path:nth-child(3)" : {animation : "fillAnimation4 4s linear infinite;"}}}>
+        <SVG styles={{width : "450px", maxWidth : "100%", "& path:nth-child(0)" : {animation : "fillAnimation2 2s linear infinite;"}, "& path:nth-child(1)" : {animation : "fillAnimation2 2s linear infinite;"}, "& path:nth-child(2)" : {animation : "fillAnimation3 2s linear infinite;"}, "& path:nth-child(3)" : {animation : "fillAnimation4 2s linear infinite;"}}}>
           <Tree />
         </SVG>        
         <p>a David van der Tak professional portfolio site</p>
