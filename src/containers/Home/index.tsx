@@ -23,7 +23,7 @@ const Home = () => {
           <SVG styles={{width : "450px", maxWidth : "100%", "& path:nth-child(0)" : {animation : "fillAnimation2 2s linear infinite;"}, "& path:nth-child(1)" : {animation : "fillAnimation2 2s linear infinite;"}, "& path:nth-child(2)" : {animation : "fillAnimation3 2s linear infinite;"}, "& path:nth-child(3)" : {animation : "fillAnimation4 2s linear infinite;"}}}>
             <Tree />
           </SVG>        
-          <p>a David van der Tak professional portfolio site</p>
+          <p className="text-center">a<br />David van der Tak<br />professional portfolio site</p>
         </div>                            
       </PageInner>
     </Page>    
