@@ -64,7 +64,7 @@ const NavLayout = () =>{
 
   return ( 
     <NavWrapper    
-     $customStyles={{display: isLoaded ? 'block' : 'none'}}
+     customStyles={{display: isLoaded ? 'block' : 'none'}}
     >
       <MenuToggle toggle={() => setIsOpen(!isOpen)} active={isOpen} />
       <NavBackground 

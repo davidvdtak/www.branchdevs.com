@@ -3,7 +3,7 @@ import styled from "styled-components";
 import theme from "../theme";
 
 interface CustomStyledDivProps {
-  $customStyles?: {[key: string] : string;};
+  customStyles?: {[key: string] : string;};
 }
 
 export const BaseWrapper = styled.div`
@@ -37,7 +37,7 @@ export const NavWrapper = styled.div<CustomStyledDivProps>`
   top: 0; 
   left: 0;  
   padding: 15px;
-  ${props => props.$customStyles};
+  ${props => props.customStyles};
 
   & ul {
     width: 100%;

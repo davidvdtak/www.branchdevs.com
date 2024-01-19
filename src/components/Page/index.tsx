@@ -1,11 +1,12 @@
 import React, { forwardRef, useEffect, useState } from "react";
-import { PageWrapper, PageInner, PageTransition } from "./styled";
+import { PageWrapper, PageInnerStyle, PageTransition } from "./styled";
 
 interface Props {
   children: React.ReactNode;
+  [key: string]: any;
 }
 
-const Page = forwardRef<HTMLDivElement, Props>(({ children }, ref) => {
+const Page = forwardRef<HTMLDivElement, Props>(({ children, styles }) => {
   const [isOverlayVisible, setIsOverlayVisible] = useState(true);
 
   const exits = [
@@ -40,8 +41,10 @@ const Page = forwardRef<HTMLDivElement, Props>(({ children }, ref) => {
 
   return (
     <>
-      <PageWrapper>
-        <PageInner>{children}</PageInner>
+      <PageWrapper
+        customStyles={styles}
+      >
+        {children}
       </PageWrapper>
       {isOverlayVisible &&
         <PageTransition           
@@ -60,3 +63,12 @@ const Page = forwardRef<HTMLDivElement, Props>(({ children }, ref) => {
 });
 
 export default Page;
+
+
+export const PageInner = ({ children, styles }: Props) => (
+  <PageInnerStyle
+    customStyles={styles}
+  >
+    {children}
+  </PageInnerStyle>
+)
