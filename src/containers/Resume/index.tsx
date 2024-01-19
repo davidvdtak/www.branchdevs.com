@@ -13,21 +13,21 @@ const Resume = () =>{
       <PageInner>
         <div className="container">
           <h2 className="mb-4">Work Experience</h2>
-          <div className="blockquote">
+          <div>
             <h3 className="text-primary">Lead Developer / Chief Development Officer</h3>
             <h5 className="text-secondary">Zaronology Inc, October 2020 to Present</h5>
             <p>Working on multiple projects for a diverse range of clients. Projects ranged from custom e-commerce sites, reporting dashboards, to building bridges to connect different services together.</p>
             <p>Build in Laravel PHP framework/React/NestJS (Typescript framework)</p>
           </div>
           <hr />
-          <div className="blockquote">
+          <div>
             <h3 className="text-primary">Technical Officer</h3>
             <h5 className="text-secondary">iEvents.com, February 2015 to March 2020</h5>
             <p>Started out by managing content on multiple static html sites. I quickly transitioned the websites to WordPress for easier content management. To control event listings from one place, I built a proprietary backend solution from the ground up with PHP/Laravel Framework (EMS; Event Management System).</p>
             <p>This system grew over the years and development never stopped. More services, systems and reporting for all departments where added by integrating external API’s and building custom solutions. The last two years I worked on a custom API to connect websites and apps.</p>
           </div>
           <hr />
-          <div className="blockquote">
+          <div>
             <h3 className="text-primary">Web Developer</h3>
             <h5 className="text-secondary">IQ Leads, October 2012 to February 2015</h5>
             <p>Developing custom websites within WordPress or Custom PHP Sites. Building connections via API’s and Social Media platforms. Experience with customizing WooCommerce for WordPress. Making sure that all sites were SEO proof.</p>
