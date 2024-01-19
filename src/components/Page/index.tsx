@@ -14,7 +14,8 @@ const Page = (({ children, styles }: Props) => {
       display: "block",
       opacity: [1,1],
       width: ["0%", "55%", "25%", "40%", "100%"],
-      paddingTop: ["0%", "55%", "25%", "40%", "100%"],      
+      paddingTop: ["0%", "55%", "25%", "40%", "0%"],      
+      height: ["0%", "0%", "0%", "0%", "100%"],
       borderRadius: ["100%", "100%", "100%", "100%", "0%"],
       transition: { duration: 1.5 } 
     },
@@ -23,6 +24,7 @@ const Page = (({ children, styles }: Props) => {
       opacity: [1,1],
       width: ["0%", "30%", "40%", "50%", "100%"],
       paddingTop: ["0%", "15%", "20%", "35%", "100%"],      
+      height: ["0%", "0%", "0%", "0%", "100%"],
       borderRadius: ["100%", "0%"],
       rotate: [0, 0, 270, 270, 0],
       transition: { duration: 1.5 } 

@@ -24,9 +24,10 @@ export const BaseInner = styled.div`
 `;
 
 export const NavBar = styled.div`
-  display: none;
+  min-height: 55px;
+  & > div { display: none;}
   @media (min-width: 992px)  {    
-    display: block;
+    & > div { display: block;}
   }
 `;
 
