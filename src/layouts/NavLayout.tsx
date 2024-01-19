@@ -6,28 +6,28 @@ import { motion } from "framer-motion"
 import { MenuToggle } from "src/components/MenuToggle";
 import MenuLink from "src/components/MenuLink";
 
-const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 32px 27px)`,
-    transition: {
-      type: "spring",
-      stiffness: 20,
-      restDelta: 2
-    }
-  }),
-  closed: {
-    clipPath: "circle(20px at 32px 27px)",
-    transition: {      
-      type: "spring",
-      stiffness: 400,
-      damping: 40
-    }
-  }
-};
-
-
 const NavLayout = () =>{
   const [isOpen, setIsOpen] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  const sidebar = {
+    open: (height = 1000) => ({
+      clipPath: `circle(${height * 2 + 200}px at 32px 27px)`,
+      transition: {
+        type: "spring",
+        stiffness: 20,
+        restDelta: 2
+      }
+    }),
+    closed: {
+      clipPath: "circle(20px at 32px 27px)",
+      transition: {      
+        type: "spring",
+        stiffness: 400,
+        damping: 40
+      }
+    }
+  };
 
   const NavOptions = {
     open: { opacity: 1, x: 0 },
@@ -59,12 +59,18 @@ const NavLayout = () =>{
   const location = useLocation();
   useEffect(() => {
     setIsOpen(false);
+    setTimeout(()=> {setIsLoaded(true)}, 150);
   },[location.pathname])
 
   return ( 
-    <NavWrapper theme={theme}>
+    <NavWrapper    
+     $customStyles={{display: isLoaded ? 'block' : 'none'}}
+    >
       <MenuToggle toggle={() => setIsOpen(!isOpen)} active={isOpen} />
-      <NavBackground animate={isOpen ? "open" : "closed"} variants={sidebar} theme={theme}>    
+      <NavBackground 
+        animate={isOpen ? "open" : "closed"} 
+        variants={sidebar} 
+      >    
         <span className="d-block h3 text-center text-uppercase fw-bold">
           <span style={{color: theme.colors.primary}}>Branch</span>
           <span style={{color: theme.colors.secondary}}>Devs</span>
