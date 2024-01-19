@@ -20,10 +20,10 @@ export const PageInnerStyle = styled.div<CustomStyledDivProps>`
   flex-grow: 1;
   display: flex;
   flex-direction: column;    
-  padding:40px;
+  padding: 25px 15px;
   ${props => props.customStyles}
-  @media (max-width: 991px)  {    
-    padding: 25px;
+  @media (min-width: 992px)  {  
+    padding:40px;
   }    
 `;
 
