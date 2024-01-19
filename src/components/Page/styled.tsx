@@ -31,4 +31,5 @@ export const PageTransition = styled(motion.div)`
   background: ${theme.colors.primary};
   position: fixed;
   display: none;    
+  overflow: hidden;
 `;
