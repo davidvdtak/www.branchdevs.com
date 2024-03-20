@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLinkWrapper, LinkText } from "./styled";
 import { Link, useLocation } from "react-router-dom";
-import SVG from "../SVG";
 
 interface Props {
   link: string;
@@ -23,15 +22,7 @@ const NavLink: React.FC<Props> = ({
     >
       <Link to={link}>
         {icon &&
-          <SVG 
-            styles={{
-              width: "20px", 
-              height: "23px", 
-              marginRight: "8px", 
-            }}
-          >
-            {icon}
-          </SVG>
+          {icon}
         }
         <LinkText 
           $active={(link === '/' && pathname === '/') || (link !== '/' && pathname.startsWith(link)) ? true : false}
