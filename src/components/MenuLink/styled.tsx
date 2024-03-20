@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 interface Props {
   $active?: boolean;
-  theme?: {[key: string] : any};
 }
 
 export const NavLinkWrapper = styled.div<Props>`  
@@ -15,9 +14,7 @@ export const NavLinkWrapper = styled.div<Props>`
     display:flex;
     width: 100%;
     text-decoration: none;
-    background: ${(props) => props?.$active ? props.theme.colors.base_100 : 'transparent'};
     &:hover{
-      background:${props => props.theme.colors.base_100};
       span{ color: #fff; }
       svg{
         fill #fff!important;

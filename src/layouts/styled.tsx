@@ -1,27 +1,9 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import theme from "../theme";
 
 interface CustomStyledDivProps {
   customStyles?: {[key: string] : string;};
 }
-
-export const BaseWrapper = styled.div`
-  background: ${theme.colors.base_100};
-  width: 100%;
-  min-height: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-`;
-
-export const BaseInner = styled.div`
-  position: relative!important;
-  display: flex!important;
-  flex-grow: 1!important;
-  flex-direction: column!important;
-  overflow: hidden!important
-`;
 
 export const NavBar = styled.div`
   min-height: 55px;
@@ -55,7 +37,7 @@ export const NavWrapper = styled.div<CustomStyledDivProps>`
 `;
 
 export const NavBackground = styled(motion.div)`   
-  background: ${theme.colors.base_200};
+  background: var(--bg-primary);
   position: fixed;
   z-index: 1;
   top: 0;

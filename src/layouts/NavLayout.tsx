@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import theme from "../theme";
 import { useLocation } from "react-router-dom";
 import { NavBackground, NavWrapper } from "./styled";
 import { motion } from "framer-motion"
-import { MenuToggle } from "src/components/MenuToggle";
-import MenuLink from "src/components/MenuLink";
+import { MenuToggle } from "../components/MenuToggle";
+import MenuLink from "../components/MenuLink";
 
 const NavLayout = () =>{
   const [isOpen, setIsOpen] = useState(false)
@@ -72,8 +71,8 @@ const NavLayout = () =>{
         variants={sidebar} 
       >    
         <span className="d-block h3 text-center text-uppercase fw-800">
-          <span style={{color: theme.colors.primary}}>Branch</span>
-          <span style={{color: theme.colors.secondary}}>Devs</span>
+          <span className="text-primary">Branch</span>
+          <span className="text-secondary">Devs</span>
         </span> 
         <motion.nav
           animate={isOpen ? "open" : "closed"}

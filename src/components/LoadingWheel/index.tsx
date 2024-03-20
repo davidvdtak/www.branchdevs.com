@@ -1,6 +1,5 @@
 import React from "react";
 import { LoadingWheelWrap } from "./styled";
-import theme from "../../theme";
 
 interface Props {
   style?: {[key: string] : any};
@@ -42,7 +41,6 @@ const LoadingWheel: React.FC<Props> = ({
     <LoadingWheelWrap
       style={overrideStyles}
       $customStyles={customStyles}
-      theme={theme}
     >
       <div></div>
       <div></div>

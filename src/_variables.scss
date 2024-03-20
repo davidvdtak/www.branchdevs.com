@@ -1,0 +1,11 @@
+$color_primary: #EC9C54;
+$color_secondary: #5DA6D8;
+$color_white: #fff;
+
+$color_primary_dark: darken($color_primary, 10%);
+$color_primary_light: lighten($color_primary, 10%);
+
+$color_secondary_dark: darken($color_secondary, 10%);
+$color_secondary_light: lighten($color_secondary, 10%);
+
+$bg_color_primary: #35312E;
