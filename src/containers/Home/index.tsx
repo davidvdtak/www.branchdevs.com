@@ -85,10 +85,15 @@ export default Home;
 const Badge = ({ children } :  {children: any}) => {
   return (
     <motion.span
-      layout
-      initial={{ opacity: 0, scale: 0.2 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1 }}
+      className="badge"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.3 }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0 }
+      }}
     >
       {children}      
     </motion.span>
