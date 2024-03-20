@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from './styles.module.scss';
-import Tree from "../../components/svg/Tree";
+import Tree from "../../components/SVG/Tree";
 import { motion } from "framer-motion";
 
 const Home = () => {
