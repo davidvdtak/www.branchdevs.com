@@ -51,9 +51,14 @@
 
     }
 
-    .svgChange :local {
-      width: 500px;
-      max-width: 100%;
+    .svgChange {
+      svg {
+        width: 500px;
+        max-width: 100%;
+      }
+    }
+
+    .svgChange :local {      
       svg path:nth-child(0) {animation : fillAnimation2 2s linear infinite;}
       svg path:nth-child(1) {animation : fillAnimation2 2s linear infinite;}
       svg path:nth-child(2) {animation : fillAnimation3 2s linear infinite;}
