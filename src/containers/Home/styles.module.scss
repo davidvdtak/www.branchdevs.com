@@ -18,7 +18,7 @@
   text-align: center;
   padding: 15px 15px;
 
-  &[class~="inner2"] {
+  &[class~="inner2"] {    
     background-color: #000;
   }
 
@@ -36,8 +36,11 @@
     }
 
     .badgeWrap {
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
       display: flex;
-      gap: 24px;
+      gap: 35px;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;

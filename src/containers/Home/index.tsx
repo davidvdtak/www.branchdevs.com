@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import styles from './styles.module.scss';
 import Tree from "../../components/SVG/Tree";
-import { motion } from "framer-motion";
+import Skills from "./skills";
+import Apis from "./apis";
+
 
 const Home = () => {
 
@@ -29,49 +31,23 @@ const Home = () => {
       <div className={[styles.inner,'inner2'].join(' ')}>
         <div className="container pb-4">
           <h2 className="mb-4 text-center">Skills</h2>    
-          <div className="badgeWrap">          
-            <Badge>Node.js</Badge>
-            <Badge>TypeScript</Badge>
-            <Badge>React</Badge>
-            <Badge>NestJS</Badge>
-            <Badge>NextJS</Badge>          
-            <Badge>PHP</Badge> 
-            <Badge>PHP Laravel</Badge>         
-            <Badge>WordPress</Badge>                    
-            <Badge>jQuery</Badge>          
-            <Badge>CSS</Badge>
-            <Badge>MySQL</Badge>
-            <Badge>AJAX</Badge>
-            <Badge>HTML5</Badge>          
-            <Badge>CSS</Badge>
-            <Badge>Javascript</Badge>
-            <Badge>Bootstrap</Badge>
-            <Badge>JavaScript</Badge>
-            <Badge>APIs</Badge>          
-            <Badge>JSON</Badge>                              
-            <Badge>REST</Badge>          
-            <Badge>Git</Badge>          
-          </div>
+          <Skills />
         </div>
       </div>
       <div className={[styles.inner,'inner3'].join(' ')}>
         <div className="container pt-4">
           <h2>Selection of API integrations</h2>    
-          <div className="badgeWrap"> 
-            <Badge>Stripe</Badge>
-            <Badge>PayPal</Badge>
-            <Badge>Shopify</Badge>
-            <Badge>Konnektive</Badge>
-            <Badge>Sticky.io</Badge>
-            <Badge>Everflow</Badge>
-            <Badge>Facebook</Badge>
-            <Badge>Calendly</Badge>
-            <Badge>HubSpot</Badge>
-            <Badge>TicketSocket</Badge>
-            <Badge>Eventbrite</Badge>
-            <Badge>Jira</Badge>
-            <Badge>Slack</Badge>          
-          </div>
+          <Apis />
+        </div>   
+      </div> 
+      <div className={[styles.inner].join(' ')}>
+        <div className="container pt-4">
+          <h2>Portfolio Frontend</h2>    
+        </div>   
+      </div> 
+      <div className={[styles.inner,'inner2'].join(' ')}>
+        <div className="container pt-4">
+          <h2>Portfolio Backend</h2>    
         </div>   
       </div> 
     </div>    
@@ -79,23 +55,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-const Badge = ({ children } :  {children: any}) => {
-  return (
-    <motion.span
-      className="badge"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 0.3 }}
-      variants={{
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0 }
-      }}
-    >
-      {children}      
-    </motion.span>
-  );
-}
