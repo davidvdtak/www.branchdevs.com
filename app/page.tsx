@@ -539,6 +539,107 @@ export default function Home() {
               </Column>
             </Row>
           </Column>
+          <Column fillWidth>  
+            <Row
+              horizontal="center"
+              fillWidth
+              gap="32"
+              position="relative"
+              className="flex-col md:flex-row!"
+            >          
+              <Column
+                fill
+                horizontal="center"
+                position="relative"
+              >
+                <TiltFx
+                  fill
+                  radius="xl"
+                  border="accent-alpha-weak"
+                  overflow="auto"
+                >
+                  <HoloFx fill>
+                    <Background
+                      fill
+                      gradient={{
+                        display: true,
+                        tilt: -45,
+                        height: 150,
+                        width: 100,
+                        x: 75,
+                        y: -50,
+                        colorStart: "brand-solid-strong",
+                        colorEnd: "accent-solid-weak",
+                      }}
+                    >
+                      <Column
+                        fill
+                        position="relative"
+                        padding="24"
+                        vertical="center"
+                        gap="12"
+                        onSolid="neutral-strong"
+                      >
+                        <p>DappzSports was preparing for rapid growth but their e-commerce platform wasn’t built to handle surging demand. Build a robust, scalable system designed to maximize sales and deliver a seamless shopping experience.</p>
+                        <p>Developed a high-performance e-commerce platform built to support high traffic, optimize conversions, and ensure accurate order processing.</p>
+                        <ul className="list-disc">
+                          <li>Optimized the sales funnel by reducing friction points, improving checkout flow, and increasing conversion rates.</li>
+                          <li>Designed a scalable infrastructure to handle peak traffic spikes with zero downtime and fast page load times.</li>
+                        </ul>
+                      </Column>
+                    </Background>
+                  </HoloFx>
+                </TiltFx>
+              </Column>
+              <Column
+                fill
+                horizontal="center"
+                position="relative"
+              >
+                <TiltFx
+                  fill
+                  radius="xl"
+                  border="accent-alpha-weak"
+                  overflow="auto"
+                >
+                  <HoloFx fill>
+                    <Background
+                      fill
+                      gradient={{
+                        display: true,
+                        tilt: -45,
+                        height: 150,
+                        width: 100,
+                        x: 75,
+                        y: -50,
+                        colorStart: "brand-solid-strong",
+                        colorEnd: "accent-solid-weak",
+                      }}
+                    >
+                      <Column
+                        fill
+                        position="relative"
+                        padding="24"
+                        vertical="center"
+                        gap="12"
+                        onSolid="neutral-strong"
+                      >
+                        <p>iEvents.com needed a scalable, streamlined solution to manage their large-scale, recurring events seamlessly. </p>
+                        <p>Engineered a proprietary Event Management System (EMS) tailored to their unique operational challenges — enabling efficient planning, execution, and tracking of major events like July 4th, Halloween, and New Year’s Eve.</p>
+                        <p>Delivered a fully integrated event management platform that automated workflows, improved operational efficiency, and strengthened digital presence.</p>
+                        <ul className="list-disc">
+                          <li>Engineered a comprehensive EMS to centralize event operations, sales tracking, reporting, and staffing functions.</li>
+                          <li>Developed and maintained a WordPress multisite network for the corporate website and diverse event categories, ensuring consistent branding and user experience.</li>
+                          <li>Built a custom WordPress plugin to connect the EMS with the multisite network, automating event propagation and streamlining promotion efforts.</li>
+                          <li>Automated content and event updates across the WordPress multisite, reducing manual labor and minimizing errors.</li>
+                        </ul>
+                      </Column>
+                    </Background>
+                  </HoloFx>
+                </TiltFx>
+              </Column>
+            </Row>
+          </Column>
         </Row>
 
         <Row
