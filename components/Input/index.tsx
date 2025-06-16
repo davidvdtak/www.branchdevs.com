@@ -169,7 +169,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             {!labelAsPlaceholder && (
               <Text
                 as="label"
-                variant="label-default-m"
+                variant="label-default-md"
                 htmlFor={id}
                 className={classNames(styles.label, styles.inputLabel, {
                   [styles.floating]: isFocused || isFilled,
@@ -188,7 +188,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         </Flex>
         {displayError && errorMessage !== false && (
           <Flex paddingX="16">
-            <Text as="span" id={`${id}-error`} variant="body-default-s" onBackground="danger-weak">
+            <Text as="span" id={`${id}-error`} variant="body-default-sm" onBackground="danger-weak">
               {validationError || errorMessage}
             </Text>
           </Flex>
@@ -198,7 +198,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             <Text
               as="span"
               id={`${id}-description`}
-              variant="body-default-s"
+              variant="body-default-sm"
               onBackground="neutral-weak"
             >
               {description}

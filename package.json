@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@floating-ui/react-dom": "^2.1.1",
+    "@internationalized/date": "^3.8.2",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "compressorjs": "^1.2.1",
@@ -29,6 +30,8 @@
     "@types/node": "20.17.23",
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.2",
+    "eslint": "^9.29.0",
+    "eslint-config-next": "15.3.3",
     "postcss-custom-media": "^10.0.7",
     "postcss-flexbugs-fixes": "^5.0.2",
     "typescript": "5.8.2"

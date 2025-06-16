@@ -19,7 +19,7 @@ const InteractiveDetails: React.FC<InteractiveDetailsProps> = forwardRef<
   return (
     <Flex ref={ref} direction="column" className={className} onClick={onClick} id={id}>
       <Flex gap="4" vertical="center">
-        <Text as="span" variant="label-default-m" onBackground="neutral-strong">
+        <Text as="span" variant="label-default-md" onBackground="neutral-strong">
           {label}
         </Text>
         {iconButtonProps?.tooltip && (
@@ -29,7 +29,7 @@ const InteractiveDetails: React.FC<InteractiveDetailsProps> = forwardRef<
         )}
       </Flex>
       {description && (
-        <Text as="span" variant="body-default-s" onBackground="neutral-weak">
+        <Text as="span" variant="body-default-sm" onBackground="neutral-weak">
           {description}
         </Text>
       )}

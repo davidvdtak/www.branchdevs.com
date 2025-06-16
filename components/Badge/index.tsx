@@ -32,7 +32,7 @@ const Badge = forwardRef<HTMLDivElement | HTMLAnchorElement, BadgeProps>(
       >
         {icon && <Icon className="mr-8" size="sm" name={icon} onBackground="brand-medium" />}
         {title && (
-          <Text onBackground="brand-strong" variant="label-strong-s">
+          <Text onBackground="brand-strong" variant="label-strong-sm">
             {title}
           </Text>
         )}

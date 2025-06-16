@@ -52,7 +52,7 @@ const Toast = forwardRef<HTMLDivElement, ToastProps>(
       >
         <Flex fillWidth vertical="center" gap="8">
           {icon && <Icon size="sm" onBackground={`${variant}-medium`} name={iconMap[variant]} />}
-          <Text variant="body-default-s" style={{ width: "100%" }} as="div">
+          <Text variant="body-default-sm" style={{ width: "100%" }} as="div">
             {children}
           </Text>
           {action && <div>{action}</div>}

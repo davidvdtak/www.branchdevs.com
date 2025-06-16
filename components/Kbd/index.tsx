@@ -27,7 +27,7 @@ const Kbd = forwardRef<HTMLDivElement, KbdProps>(
       className={className}
       style={style}
       {...rest}>
-      <Text as="span" variant="label-default-s">
+      <Text as="span" variant="label-default-sm">
         {label || children}
       </Text>
     </Flex>
