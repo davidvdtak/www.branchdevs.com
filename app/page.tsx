@@ -234,10 +234,12 @@ export default function Home() {
                 />
                 <Heading marginTop="24" as="h3" variant="display-default-md">
                   David van der Tak
-                </Heading>                
+                </Heading> 
+                {/*}               
                 <Text align="center" onBackground="neutral-weak" marginBottom="24">
                   info@branchdevs.com
                 </Text>
+                */}
                 <Text align="center" onBackground="neutral-weak">
                   Experienced Full Stack Developer proficient in a variety of languages, frameworks, and services. Passionate about crafting efficient and scalable solutions to meet business needs. Committed to continuous learning and staying updated with industry trends.
                 </Text>
