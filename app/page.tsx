@@ -201,7 +201,7 @@ export default function Home() {
               bottomRadius="lg"
               overflow="hidden"
               position="relative"
-              fillWidth
+              fill
               horizontal="center"
               border="neutral-medium"
             >
@@ -216,7 +216,8 @@ export default function Home() {
                   marginBottom: "-72px",
                 }}
               />
-              <Column                
+              <Column    
+                fill            
                 paddingX="32"
                 paddingBottom="32"
                 fillWidth
@@ -253,6 +254,7 @@ export default function Home() {
                   horizontal="center"
                   wrap
                   paddingY="16"
+                  className="mt-auto!"
                 >
                   {["Typescript", "Javascript", "NodeJS", "React", "NestJS", "NextJS", "SQL", "NoSQL", "MySQL", "AWS Lambda","AWS Amplify","AWS App Runner", "AWS DynamoDB", "AWS S3","PHP", "Laravel"].map((tag, index) => (
                     <Chip
