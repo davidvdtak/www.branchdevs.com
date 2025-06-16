@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    turbo: {
+      enabled: false, // explicitly disable Turbopack
+    },
+  },
   devIndicators: {
     buildActivity: false,
     autoPrerender: false, // Disable prerender indicator
