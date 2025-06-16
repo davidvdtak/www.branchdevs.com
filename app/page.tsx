@@ -39,7 +39,7 @@ export default function Home() {
   }, [theme]);
 
   return (
-    <Column fillWidth paddingX="sm" horizontal="center" flex={1}>
+    <Column fillWidth horizontal="center" flex={1}>
       <Fade
         zIndex={3}
         pattern={{
@@ -87,15 +87,17 @@ export default function Home() {
           </Flex>
         </Row>
       </Row>
+      
       <Column
         overflow="hidden"
         as="main"
         position="relative"
-        radius="xl"
         horizontal="center"
         border="neutral-alpha-weak"
         fillWidth        
       >
+
+        {/* HEADER */}
         <Column
           fillWidth
           horizontal="center"
@@ -117,43 +119,7 @@ export default function Home() {
               height: "0.25rem",
             }}
           />
-          <Background
-            mask={{
-              x: 80,
-              y: 0,
-              radius: 100,
-            }}
-            position="absolute"
-            gradient={{
-              display: true,
-              tilt: -35,
-              height: 50,
-              width: 75,
-              x: 100,
-              y: 40,
-              colorStart: "accent-solid-medium",
-              colorEnd: "static-transparent",
-            }}
-          />
-          <Background
-            mask={{
-              x: 100,
-              y: 0,
-              radius: 100,
-            }}
-            position="absolute"
-            gradient={{
-              display: true,
-              opacity: 100,
-              tilt: -35,
-              height: 20,
-              width: 120,
-              x: 120,
-              y: 35,
-              colorStart: "brand-solid-strong",
-              colorEnd: "static-transparent",
-            }}
-          />
+          
           <Column fillWidth horizontal="center" gap="32" padding="32" position="relative"> 
             <Heading variant="display-strong-3xl" className="text-[var(--scheme-accent-500)]!">Branch<Text className="text-[var(--scheme-aqua-500)]">Devs</Text></Heading>           
           </Column>          
