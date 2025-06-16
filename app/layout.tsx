@@ -54,6 +54,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: site.name,
     description: site.description,
+    icons: [
+    { rel: 'icon', url: '/favicon-light.svg', media: '(prefers-color-scheme: light)' },
+    { rel: 'icon', url: '/favicon-dark.svg', media: '(prefers-color-scheme: dark)' },
+    { rel: 'icon', url: '/favicon-light.svg' }, // fallback
+  ],
     openGraph: {
       title: site.name,
       description: site.description,
