@@ -6,10 +6,12 @@ import { headers } from "next/headers";
 import { Metadata } from "next";
 
 import { site, schema, social } from "@/lib/config/site";
-import { Background, Column, Flex, ToastProvider } from "@/components";
+import { Background, Column, Fade, Flex, LogoIcon, Row, Text, ToastProvider, ToggleButton } from "@/components";
 
 import { Inter } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
+import { Navbar } from "./_components/navbar";
+import { Footer } from "./_components/footer";
 
 const primary = Inter({
   variable: "--font-primary",
@@ -103,7 +105,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) {  
   return (
     <Flex
       as="html"
@@ -146,7 +148,25 @@ export default function RootLayout({
               height: "0.25rem",
             }}
           />
-          {children}
+          <Column fillWidth horizontal="center" flex={1}>
+            <Fade
+              zIndex={3}
+              pattern={{
+                display: true,
+                size: "4",
+              }}
+              position="fixed"
+              top="0"
+              left="0"
+              to="bottom"
+              height={5}
+              fillWidth
+              blur={0.25}
+            />
+            <Navbar />
+            {children}
+            <Footer />
+          </Column>
         </Column>
       </ToastProvider>
     </Flex>

@@ -1,93 +1,28 @@
 "use client";
 
 import React, { useState } from "react";
-import { site } from "@/lib/config/site";
 
 import {
   Heading,
   Text,
   Button,
-  Icon,
-  Input,
   Avatar,
-  Textarea,
   Dialog,
   Background,
-  useToast,
-  Fade,
   TiltFx,
   HoloFx,
   Column,
   Row,
-  LogoIcon, 
-  ToggleButton,
   Flex,
   Chip
 } from "@/components";
 import Image from "next/image";
 
-export default function Home() {
-  const [theme, setTheme] = useState(site.theme);
-
-
+export default function Home() {  
   const [isFirstDialogOpen, setIsFirstDialogOpen] = useState(false);
 
-
-  React.useEffect(() => {
-    const root = document.documentElement;
-    root.setAttribute("data-theme", theme);
-  }, [theme]);
-
-  return (
-    <Column fillWidth horizontal="center" flex={1}>
-      <Fade
-        zIndex={3}
-        pattern={{
-          display: true,
-          size: "4",
-        }}
-        position="fixed"
-        top="0"
-        left="0"
-        to="bottom"
-        height={5}
-        fillWidth
-        blur={0.25}
-      />
-      <Row position="fixed" top="0" fillWidth horizontal="center" zIndex={3}>
-        <Row
-          data-border="rounded"
-          horizontal="space-between"
-          fillWidth
-          paddingRight="64"
-          paddingLeft="32"
-          paddingY="20"
-        >
-          <Flex align="center" vertical="center" gap="4">
-            <LogoIcon height="20" width="20" fill={theme === "dark" ? "#ffffff" : "#000000"} />
-            <Text variant="body-default-lg" className={theme === "dark" ? "text-white" : "text-black"}>BranchDevs</Text>
-          </Flex>
-          <Flex gap="-1">
-            {[
-              theme === "dark" ? { label: "", value: "light", prefixIcon: "light" } : { label: "", value: "dark", prefixIcon: "dark" },
-            ].map((button, index) => {
-              return (
-                <ToggleButton
-                  selected={false}
-                  variant="outline"
-                  key={button.value}
-                  onClick={(value) => setTheme(button.value as "light" | "dark")}
-                  role="tab"
-                  fillWidth={true}
-                  size="md"
-                  prefixIcon={button.prefixIcon}
-                />
-              );
-            })}
-          </Flex>
-        </Row>
-      </Row>
-      
+  return (   
+    <>       
       <Column
         overflow="hidden"
         as="main"
@@ -280,8 +215,8 @@ export default function Home() {
               }}
             />
             <Column horizontal="center" vertical="center" gap="48" fillWidth position="relative">
-              <Heading align="center" as="h2" variant="display-default-xl">Introduction</Heading>              
-              <div className="w-full neutral-on-background-strong">
+              <Heading align="center" as="h2" variant="display-default-2xl">Introduction</Heading>              
+              <div className="w-full text-justify md:text-left neutral-on-background-strong">
                 <p>I'm David van der Tak — a Senior Software Engineer passionate about building scalable, efficient, and future-proof web platforms. With over a decade of full-stack development experience, I specialize in transforming complex business needs into clean, performant code.</p>
                 <p>I have lead technology strategy and development for high-impact e-commerce projects. From architecting APIs with NestJS and Node.js to crafting modern UIs with React and Next.js, I bring deep technical expertise and a strong product mindset to every build. I thrive in cross-functional teams, where I can bridge communication between technical and non-technical stakeholders to ship solutions that truly move the needle.</p>
                 <p>Before that, I developed a proprietary Event Management System used for large-scale events, engineered custom WordPress plugins to automate workflows, and led multi-platform transitions from PHP/Laravel stacks to modern JavaScript ecosystems.</p>
@@ -314,7 +249,8 @@ export default function Home() {
               className="flex-col md:flex-row!"
             >          
               <Column
-                fill
+                fillWidth
+                
                 horizontal="center"
                 position="relative"
               >
@@ -339,12 +275,13 @@ export default function Home() {
                       }}
                     >
                       <Column
-                        fill
+                        fillWidth
                         position="relative"
                         padding="24"
                         vertical="center"
                         gap="12"
                         onSolid="neutral-strong"
+                        
                       >
                         <p>TeamSeas, led by YouTube creators MrBeast and Mark Rober, set out to raise $30 million to remove plastic from the ocean. With just 23 days to launch, they needed a system that could handle extreme traffic, process every donation seamlessly, and ensure accurate, real-time tracking of every dollar.</p>
                         <p>Built a scalable, high-performance tracking system that ensured every donation was accounted for, attributed correctly, and visible in real-time.</p>
@@ -359,7 +296,8 @@ export default function Home() {
                 </TiltFx>
               </Column>
               <Column
-                fill
+                fillWidth
+                
                 horizontal="center"
                 position="relative"
               >
@@ -384,12 +322,13 @@ export default function Home() {
                       }}
                     >
                       <Column
-                        fill
+                        fillWidth
                         position="relative"
                         padding="24"
                         vertical="center"
                         gap="12"
                         onSolid="neutral-strong"
+                        
                       >
                         <p>Chris Beat Cancer had a growing audience but struggled with messy tracking, inaccurate affiliate attribution, and poor audience segmentation.</p>                      
                         <p>implemented a clean tracking system and optimized segmentation strategies to drive more precise marketing and revenue attribution.</p>
@@ -414,7 +353,8 @@ export default function Home() {
               className="flex-col md:flex-row!"
             >          
               <Column
-                fill
+                fillWidth
+                
                 horizontal="center"
                 position="relative"
               >
@@ -439,12 +379,13 @@ export default function Home() {
                       }}
                     >
                       <Column
-                        fill
+                        fillWidth
                         position="relative"
                         padding="24"
                         vertical="center"
                         gap="12"
                         onSolid="neutral-strong"
+                        
                       >
                         <p>Network Marketing Pro was gearing up for high-growth virtual events, but their systems weren’t built to keep up. We worked closely with them to continuously refine and optimize their event infrastructure.</p>
                         <p>Built a high-performance, event-ready system to handle massive audiences, maximize conversions, and ensure revenue accuracy.</p>
@@ -459,7 +400,8 @@ export default function Home() {
                 </TiltFx>
               </Column>
               <Column
-                fill
+                fillWidth
+                
                 horizontal="center"
                 position="relative"
               >
@@ -484,12 +426,13 @@ export default function Home() {
                       }}
                     >
                       <Column
-                        fill
+                        fillWidth
                         position="relative"
                         padding="24"
                         vertical="center"
                         gap="12"
                         onSolid="neutral-strong"
+                        
                       >
                         <p>The Spa Dr set out to launch a high-impact docuseries while preparing for an eventual acquisition. To maximize engagement and revenue, they needed a system that could handle video scheduling, affiliate tracking, and secure sales seamlessly.</p>                      
                         <p>Implemented a scalable, acquisition-ready system that supported the launch, maximized conversions, and ensured an easy transition post-acquisition.</p>
@@ -514,7 +457,8 @@ export default function Home() {
               className="flex-col md:flex-row!"
             >          
               <Column
-                fill
+                fillWidth
+                
                 horizontal="center"
                 position="relative"
               >
@@ -539,12 +483,13 @@ export default function Home() {
                       }}
                     >
                       <Column
-                        fill
+                        fillWidth
                         position="relative"
                         padding="24"
                         vertical="center"
                         gap="12"
                         onSolid="neutral-strong"
+                        
                       >
                         <p>DappzSports was preparing for rapid growth but their e-commerce platform wasn’t built to handle surging demand. Build a robust, scalable system designed to maximize sales and deliver a seamless shopping experience.</p>
                         <p>Developed a high-performance e-commerce platform built to support high traffic, optimize conversions, and ensure accurate order processing.</p>
@@ -558,7 +503,8 @@ export default function Home() {
                 </TiltFx>
               </Column>
               <Column
-                fill
+                fillWidth
+                
                 horizontal="center"
                 position="relative"
               >
@@ -583,12 +529,13 @@ export default function Home() {
                       }}
                     >
                       <Column
-                        fill
+                        fillWidth
                         position="relative"
                         padding="24"
                         vertical="center"
                         gap="12"
                         onSolid="neutral-strong"
+                        
                       >
                         <p>iEvents.com needed a scalable, streamlined solution to manage their large-scale, recurring events seamlessly. </p>
                         <p>Engineered a proprietary Event Management System (EMS) tailored to their unique operational challenges — enabling efficient planning, execution, and tracking of major events like July 4th, Halloween, and New Year’s Eve.</p>
@@ -608,43 +555,8 @@ export default function Home() {
           </Column>
         </Row>
 
-        <Row
-          position="relative"
-          as="footer"
-          fillWidth
-          paddingX="lg"
-          paddingTop="128"
-          paddingBottom="80"
-        >
-          <Background
-            borderTop="brand-alpha-strong"
-            mask={{
-              x: 50,
-              y: 0,
-            }}
-            position="absolute"
-            grid={{
-              display: true,
-              width: "0.25rem",
-              color: "brand-alpha-strong",
-              height: "0.25rem",
-            }}
-          />
-          <Column
-            position="relative"
-            textVariant="body-default-xs"
-            onBackground="neutral-medium"
-            horizontal="center"
-            align="center"
-            fillWidth
-            gap="16"
-          >
-            <LogoIcon height="50" width="50" fill={theme === "dark" ? "#ffffff" : "#000000"} />
-            <Text size="sm" className={theme === "dark" ? "text-white" : "text-black"}>&copy; {(new Date).getFullYear()} / {site.name}</Text>           
-          </Column>
-        </Row>
+        
       </Column>
-
       <Dialog
         isOpen={isFirstDialogOpen}
         onClose={() => setIsFirstDialogOpen(false)}
@@ -659,7 +571,7 @@ export default function Home() {
         }
       >
         <></>        
-      </Dialog>      
-    </Column>
+      </Dialog>            
+    </>
   );
 }
