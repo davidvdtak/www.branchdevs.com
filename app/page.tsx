@@ -14,9 +14,11 @@ import {
   Column,
   Row,
   Flex,
-  Chip
+  Chip,
+  Icon
 } from "@/components";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {  
   const [isFirstDialogOpen, setIsFirstDialogOpen] = useState(false);
@@ -137,11 +139,11 @@ export default function Home() {
                 <Heading marginTop="24" as="h3" variant="display-default-md">
                   David van der Tak
                 </Heading> 
-                {/*}               
-                <Text align="center" onBackground="neutral-weak" marginBottom="24">
-                  info@branchdevs.com
+                
+                <Text onBackground="neutral-weak" marginBottom="24">
+                  <Link href="https://www.linkedin.com/in/davidvdtak" target="_blank" className="flex items-center gap-4"><Icon name="linkedin" size="xs" /> davidvdtak</Link>
                 </Text>
-                */}
+                
                 <Text align="center" onBackground="neutral-weak">
                   Experienced Full Stack Developer proficient in a variety of languages, frameworks, and services. Passionate about crafting efficient and scalable solutions to meet business needs. Committed to continuous learning and staying updated with industry trends.
                 </Text>

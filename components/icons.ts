@@ -32,7 +32,7 @@ import {
 
 import { RiVisaLine } from "react-icons/ri";
 
-import { FaDiscord, FaGithub, FaGoogle } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaGoogle, FaLinkedin } from "react-icons/fa6";
 
 import { LuChevronsLeftRight } from "react-icons/lu";
 
@@ -59,6 +59,7 @@ export const iconLibrary: Record<string, IconType> = {
   discord: FaDiscord,
   google: FaGoogle,
   github: FaGithub,
+  linkedin: FaLinkedin,
   arrowUpRight: HiArrowUpRight,
   minus: HiMiniMinus,
   plus: HiMiniPlus,
