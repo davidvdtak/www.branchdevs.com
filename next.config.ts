@@ -16,9 +16,7 @@ const nextConfig = {
       }
     ],
   },
-  sassOptions: {
-    compiler: "modern",
-  },
+  output: 'export',
 };
 
 export default nextConfig;
