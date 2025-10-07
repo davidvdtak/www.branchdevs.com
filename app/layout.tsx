@@ -1,17 +1,14 @@
-import "@/tokens/index.scss";
-import "@/styles/index.scss";
+import "@/styles/global.scss";
+import "@/styles/index.css";
+import { site, schema, social } from "@/config/site";
 
-import classNames from "classnames";
 import { headers } from "next/headers";
 import { Metadata } from "next";
 
-import { site, schema, social } from "@/lib/config/site";
-import { Background, Column, Fade, Flex, LogoIcon, Row, Text, ToastProvider, ToggleButton } from "@/components";
-
 import { Inter } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
-import { Navbar } from "./_components/navbar";
-import { Footer } from "./_components/footer";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const primary = Inter({
   variable: "--font-primary",
@@ -24,19 +21,6 @@ const code = Roboto_Mono({
   subsets: ["latin"],
   display: "swap",
 });
-
-type FontConfig = {
-  variable: string;
-};
-
-/*
-	Replace with code for secondary and tertiary fonts
-	from https://once-ui.com/customize
-*/
-const secondary: FontConfig | undefined = undefined;
-const tertiary: FontConfig | undefined = undefined;
-/*
- */
 
 export async function generateMetadata(): Promise<Metadata> {
   const host = (await headers()).get("host");
@@ -107,68 +91,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {  
   return (
-    <Flex
-      as="html"
-      lang="en"
-      fillHeight
-      background="page"
-      data-theme={site.theme ?? "light"}
-      className={classNames(
-        primary.variable,
-        code.variable,
-        secondary ? secondary.variable : "",
-        tertiary ? tertiary.variable : "",
-      )}
-    >
-      <ToastProvider>
-        <Column as="body" fillWidth  margin="0" padding="0">
-          <Background
-            position="absolute"
-            mask={{
-              x: 100,
-              y: 0,
-              radius: 100,
-            }}
-            gradient={{
-              display: true,
-              x: 100,
-              y: 60,
-              width: 70,
-              height: 50,
-              tilt: -40,
-              opacity: 90,
-              colorStart: "accent-background-strong",
-              colorEnd: "page-background",
-            }}
-            grid={{
-              display: true,
-              opacity: 100,
-              width: "0.25rem",
-              color: "neutral-alpha-medium",
-              height: "0.25rem",
-            }}
-          />
-          <Column fillWidth horizontal="center" flex={1}>
-            <Fade
-              zIndex={3}
-              pattern={{
-                display: true,
-                size: "4",
-              }}
-              position="fixed"
-              top="0"
-              left="0"
-              to="bottom"
-              height={5}
-              fillWidth
-              blur={0.25}
-            />
-            <Navbar />
+    <html lang="en" className={[primary.variable,code.variable].join(" ")}>
+      <body>
+        <div className="min-h-screen">          
+          <Header />
+          <main>
             {children}
-            <Footer />
-          </Column>
-        </Column>
-      </ToastProvider>
-    </Flex>
+          </main>
+          <Footer />
+        </div>
+      </body>
+    </html>
   );
 }
