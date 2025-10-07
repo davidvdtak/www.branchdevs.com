@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import { site, schema, social } from "@/config/site";
 
-import { headers } from "next/headers";
 import { Metadata } from "next";
 
 import { Inter } from "next/font/google";
@@ -22,13 +21,10 @@ const code = Roboto_Mono({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const host = (await headers()).get("host");
-  const metadataBase = host ? new URL(`https://${host}`) : undefined;
-
   const schemaData = {
     "@context": "https://schema.org",
     "@type": schema.type,
-    url: "https://" + site.url,
+    url: site.url,
     logo: schema.logo,
     name: schema.name,
     description: schema.description,
@@ -47,7 +43,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: site.name,
       description: site.description,
-      url: "https://" + site.url,
+      url: site.url,
       images: [
         {
           url: site.image,
@@ -74,8 +70,6 @@ export async function generateMetadata(): Promise<Metadata> {
       description: site.description,
       images: [site.image],
     },
-    metadataBase,
-    // Inject structured data using additionalHead tags:
     other: {
       head: [
         `<script type="application/ld+json">${JSON.stringify(schemaData)}</script>`,

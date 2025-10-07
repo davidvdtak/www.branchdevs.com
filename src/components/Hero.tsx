@@ -7,9 +7,9 @@ export function Hero() {
       {/* Background Tree Image - Top Left Portion Only */}
       <div className="absolute top-0 right-0 h-full w-1/2 overflow-hidden">
         <img 
-          src={"/images/branchdevs-logo.svg"} 
+          src="/images/branchdevs-logo.svg"
           alt="BranchDevs Tree" 
-          className="h-full w-auto min-w-full object-cover object-top-left scale-150 translate-x-[50px]"
+          className="h-full w-auto min-w-full object-cover object-top-left scale-150 translate-x-[50%]"
         />
         {/* Gradient overlay to blend with background */}
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/20"></div>
@@ -49,7 +49,7 @@ export function Hero() {
               </div>
             </div>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="group">
                 Start Your Project
@@ -59,6 +59,7 @@ export function Hero() {
                 View Our Work
               </Button>
             </div>
+             */}
           </div>
         </div>
       </div>
