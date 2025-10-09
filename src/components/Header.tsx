@@ -23,10 +23,10 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="hover:text-primary transition-colors">Home</a>
-            <a href="#services" className="hover:text-primary transition-colors">Services</a>
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+            <a href="/#home" className="hover:text-primary transition-colors">Home</a>
+            <a href="/#services" className="hover:text-primary transition-colors">Services</a>
+            <a href="/#about" className="hover:text-primary transition-colors">About</a>
+            <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
           </nav>
 
           {/* Desktop CTA 
@@ -48,10 +48,10 @@ export function Header() {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t pt-4">
             <div className="flex flex-col space-y-4">
-              <a href="#home" className="hover:text-primary transition-colors">Home</a>
-              <a href="#services" className="hover:text-primary transition-colors">Services</a>
-              <a href="#about" className="hover:text-primary transition-colors">About</a>
-              <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+              <a href="/#home" className="hover:text-primary transition-colors">Home</a>
+              <a href="/#services" className="hover:text-primary transition-colors">Services</a>
+              <a href="/#about" className="hover:text-primary transition-colors">About</a>
+              <a href="/#contact" className="hover:text-primary transition-colors">Contact</a>
               {/*<Button className="mt-4">Get Started</Button>*/}
             </div>
           </nav>
