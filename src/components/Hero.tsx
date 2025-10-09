@@ -21,11 +21,11 @@ export function Hero() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Software that
-                <span className="text-primary block">grows with you</span>
+                Solutions that
+                <span className="text-primary block">grow with you</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-lg">
-                We build robust software solutions, seamless integrations, and scalable cloud infrastructure for growing businesses.
+                We build software solutions, seamless integrations, and scalable cloud infrastructure for businesses.
               </p>
             </div>
 
