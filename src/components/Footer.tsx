@@ -60,10 +60,10 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © 2024 BranchDevs. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-sm text-muted-foreground">
+          <div className="flex space-x-6 text-sm text-muted-foreground">            
+              <a href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</a>
+              <a href="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</a>
             {/*
-              <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
               <a href="#" className="hover:text-foreground transition-colors">Cookie Policy</a>
             */}
           </div>
